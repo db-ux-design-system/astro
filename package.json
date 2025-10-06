@@ -28,5 +28,6 @@
     "prettier": "^3.6.2",
     "husky": "9.1.7",
     "changesets": "1.0.2"
-  }
+  },
+  "packageManager": "pnpm@10.14.0"
 }
