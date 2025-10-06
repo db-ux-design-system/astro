@@ -1,0 +1,103 @@
+---
+name: Deploy to gh-pages
+
+permissions:
+  contents: read
+
+on:
+  workflow_call:
+    inputs:
+      release:
+        required: false
+        default: "false"
+        type: string
+      preRelease:
+        required: false
+        default: "false"
+        type: string
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
+    permissions:
+      contents: write
+    steps:
+      - name: ⏬ Checkout repo
+        uses: actions/checkout@v5
+
+      - name: 🔄 Init Cache
+        uses: ./.github/actions/npm-cache
+
+      - name: ⏬ Download patternhub
+        uses: actions/download-artifact@v5
+        with:
+          name: db-ux-patternhub
+          path: build-showcases/patternhub
+
+      - name: 🦵🦿 I like to move it move it
+        shell: bash
+        run: |
+          mv build-showcases/patternhub out
+
+      - name: ↔ Extract branch name
+        uses: ./.github/actions/extract-branch
+        id: extract_branch
+
+      - name: ↔ Extract branch/tag name
+        shell: bash
+        env:
+          RELEASE: ${{ inputs.release }}
+          PRE_RELEASE: ${{ inputs.preRelease }}
+          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch-name }}
+        run: |
+          if [[ $RELEASE == "true" || $PRE_RELEASE == "true" ]]
+          then
+            echo "name=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          else
+            echo "name=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+          fi
+        id: extract
+
+      - name: 📛 Get repo name
+        uses: actions/github-script@v8
+        id: repo-name
+        with:
+          result-encoding: string
+          script: return context?.payload?.repository?.name
+
+      - name: 🔨 Build page
+        env:
+          RELEASE: ${{ inputs.release }}
+          PRE_RELEASE: ${{ inputs.preRelease }}
+          NAME: ${{ steps.extract.outputs.name }}
+          REPO_NAME: ${{ steps.repo-name.outputs.result }}
+          OWNER_NAME: ${{ github.repository_owner }}
+        run: |
+          npx --no tsx scripts/github/build-gh-page.ts
+
+      - name: 🥅 Deploy to GH-Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
+      - name: 🖨️ Print gh-pages url
+        env:
+          RELEASE: ${{ inputs.release }}
+          PRE_RELEASE: ${{ inputs.preRelease }}
+          NAME: ${{ steps.extract_branch.outputs.branch-name }}
+          REPO_NAME: ${{ steps.repo-name.outputs.result }}
+          OWNER_NAME: ${{ github.repository_owner }}
+        run: |
+          if [[ $RELEASE == "true" ]];
+          then
+            export URL=https://$OWNER_NAME.github.io/$REPO_NAME
+          elif [[ $PRE_RELEASE == "true" ]];
+          then
+            export URL=https://$OWNER_NAME.github.io/$REPO_NAME/version/${NAME}
+          else
+            export URL=https://$OWNER_NAME.github.io/$REPO_NAME/review/${NAME}
+          fi
+          echo "URL: $URL"
+          echo "### GH-Pages URL :rocket: <br> <br> $URL" >> $GITHUB_STEP_SUMMARY

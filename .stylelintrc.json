@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-use-logical", "@double-great/stylelint-a11y"],
+  "rules": {
+    "a11y/media-prefers-reduced-motion": true,
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true,
+    "csstools/use-logical": ["always", { "except": ["float"] }],
+    "selector-type-no-unknown": [true, { "ignoreTypes": ["/^db/"] }],
+    "no-descending-specificity": null,
+    "number-max-precision": null,
+    "scss/operator-no-newline-after": null
+  }
+}
