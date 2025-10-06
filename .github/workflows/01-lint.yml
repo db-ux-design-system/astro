@@ -1,24 +1,19 @@
-name: Lint
-
-permissions:
-  contents: read
+---
+name: Validate
 
 on:
   workflow_call:
 
 jobs:
-  lint:
-    name: Lint
+  validate:
+    name: Validate
     runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
     steps:
-      - name: ⏬️ Checkout repo
-        uses: actions/checkout@v5
+      - name: ⏬ Checkout repo
+        uses: actions/checkout@v4
 
-      - name: 🔄 Init Cache
-        uses: ./.github/actions/npm-cache
+      - name: 🔄 Init PNPM
+        uses: ./.github/actions/pnpm-init
 
-      - name: ⚡ Run Lint
-        run: |
-          npm run postinstall --workspace=nuxt-showcase
-          npm run build --workspace=@db-ux/core-stylelint
-          npm run lint
+      - name: 🔬 Validate repo
+        run: pnpm lint

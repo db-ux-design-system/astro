@@ -1,9 +1,6 @@
----
-name: On-PR to main
+name: On Pull Request
 
-on:
-  pull_request:
-    branches: ["main"]
+on: pull_request
 
 permissions:
   pull-requests: write
@@ -14,14 +11,3 @@ permissions:
 jobs:
   dependabot:
     uses: ./.github/workflows/99-auto-merge.yml
-
-  self-healing-dependabot-updates:
-    uses: ./.github/workflows/99-self-healing-dependabot-updates.yml
-    secrets: inherit
-
-  dependency-review:
-    uses: ./.github/workflows/99-dependency-review.yml
-
-  labeler:
-    if: github.event.pull_request.head.repo.owner.login == 'db-ux-design-system'
-    uses: ./.github/workflows/99-labeler.yml

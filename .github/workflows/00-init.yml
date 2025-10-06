@@ -1,10 +1,12 @@
+---
 name: Init Workflow
-
-permissions:
-  contents: read
 
 on:
   workflow_call:
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   init:
@@ -12,10 +14,7 @@ jobs:
     runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
     steps:
       - name: ⏬ Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
-      - name: 🔄 Init Cache Default
-        uses: ./.github/actions/npm-cache
-        env:
-          ASSET_INIT_VECTOR: ${{ secrets.ASSET_INIT_VECTOR }}
-          ASSET_PASSWORD: ${{ secrets.ASSET_PASSWORD }}
+      - name: 🔄 Init PNPM
+        uses: ./.github/actions/pnpm-init
