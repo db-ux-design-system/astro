@@ -20,7 +20,8 @@
   "scripts": {
     "prepare": "husky",
     "lint": "eslint && prettier --check . && pnpm -r lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "echo \"No build step required\""
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "1.51.0",
