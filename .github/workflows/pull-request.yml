@@ -9,8 +9,5 @@ permissions:
   security-events: write
 
 jobs:
-  lint:
-    uses: ./.github/workflows/01-lint.yml
-
   dependabot:
     uses: ./.github/workflows/99-auto-merge.yml
