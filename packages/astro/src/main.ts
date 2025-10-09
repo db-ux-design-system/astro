@@ -42,8 +42,7 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
 				globalConfig = config;
 
 				// Add bundled integrations
-				const integrations: AstroIntegration[] =
-					astroConfig.integrations;
+				const integrations: AstroIntegration[] = astroConfig.integrations;
 				// integrations.push(react());
 				integrations.push(mdx());
 			},

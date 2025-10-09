@@ -18,15 +18,15 @@ Finally, navigate to to your `astro.config.mjs` file and add the `dbUxAstro` int
 
 ```js
 // @ts-check
-import { defineConfig } from "astro/config";
-import { dbUxAstro } from "@db-ux/astro";
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		// Add the integration
 		dbUxAstro({
-			appName: "My awesome app",
+			appName: 'My awesome app',
 		}),
 	],
 });

@@ -10,4 +10,7 @@ export default defineConfig({
 			appName: 'astro',
 		}),
 	],
+	devToolbar: {
+		enabled: false,
+	},
 });

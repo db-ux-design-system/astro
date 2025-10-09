@@ -1,4 +1,5 @@
 ---
+import { AppContent } from '../../components/app-content';
 import { HtmlRoot } from '../../components/html-root';
 import { getDbUxAstroConfig } from '../../main.ts';
 
@@ -14,5 +15,7 @@ const pageTitle = frontMatter?.title
 ---
 
 <HtmlRoot title={pageTitle}>
-	<slot />
+	<AppContent>
+		<slot />
+	</AppContent>
 </HtmlRoot>

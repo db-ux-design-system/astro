@@ -1,8 +1,8 @@
 ---
-name: "PNPM Init Action"
-description: "Initialize PNPM"
+name: 'PNPM Init Action'
+description: 'Initialize PNPM'
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: 🆙 Setup pnpm
       uses: pnpm/action-setup@v4
