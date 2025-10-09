@@ -36,6 +36,33 @@ importers:
         specifier: 8.45.0
         version: 8.45.0(eslint@9.36.0)(typescript@5.9.3)
 
+  apps/astro:
+    dependencies:
+      '@astrojs/mdx':
+        specifier: 4.3.6
+        version: 4.3.6(astro@5.14.1(@types/node@24.7.0)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1))
+      '@astrojs/react':
+        specifier: 4.4.0
+        version: 4.4.0(@types/node@24.7.0)(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
+      '@db-ux/astro':
+        specifier: workspace:@db-ux/astro@*
+        version: link:../../packages/astro
+      '@db-ux/core-components':
+        specifier: 3.1.16
+        version: 3.1.16
+      '@db-ux/core-foundations':
+        specifier: 3.1.16
+        version: 3.1.16
+      '@db-ux/react-core-components':
+        specifier: 3.1.16
+        version: 3.1.16
+      astro:
+        specifier: 5.14.1
+        version: 5.14.1(@types/node@24.7.0)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+
   packages/astro:
     dependencies:
       '@astrojs/mdx':
@@ -205,11 +232,20 @@ packages:
   '@capsizecss/unpack@2.4.0':
     resolution: {integrity: sha512-GrSU71meACqcmIUxPYOJvGKF0yryjN/L1aCuE9DViCTJI7bfkjgYDPD1zbNDcINJwSSP6UaBZY9GAbYDO7re0Q==}
 
+  '@db-ux/core-components@3.1.16':
+    resolution: {integrity: sha512-NTP0ywEQpeT6k1DgVc/IbQRk2LUJoTyazuv4L2kgNg8JZEcRGEtBry6OhTpqp15SlBQYeJ5XL3rjbuPnwJ0/CA==}
+
   '@db-ux/core-components@3.1.18':
     resolution: {integrity: sha512-QqkwYB0tLSQVVT5wjWDuVvM+WdgOX/vcS1MYBWIVcQNj38NauIu9In4xYgQCfmis0fRFRfQYbmylqJuuLUB7OA==}
 
+  '@db-ux/core-foundations@3.1.16':
+    resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
+
   '@db-ux/core-foundations@3.1.18':
     resolution: {integrity: sha512-GY/hz4eNgHrJnivhyp5mOz/Uzq8Hl4jJtVnU9uuA5hcFD29DgJFRqsP6V1mLn1PPChmwkCFnR4SaC5TP126BRA==}
+
+  '@db-ux/react-core-components@3.1.16':
+    resolution: {integrity: sha512-G5NR7OKc0DPqglo5jOamLlrMLKU2KBdc+GxfLyRIot6qOqyoJCdpEIIWJfdFhe5tfhipPEZF6HzjgntNRCc7gQ==}
 
   '@dotenvx/dotenvx@1.51.0':
     resolution: {integrity: sha512-CbMGzyOYSyFF7d4uaeYwO9gpSBzLTnMmSmTVpCZjvpJFV69qYbjYPpzNnCz1mb2wIvEhjWjRwQWuBzTO0jITww==}
@@ -613,7 +649,7 @@ packages:
     engines: {node: ^14.21.3 || >=16}
 
   '@nodelib/fs.scandir@2.1.5':
-    resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==, tarball: https://bahnhub.tech.rz.db.de/artifactory/api/npm/default-npm-3rdparty/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz}
+    resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
 
   '@nodelib/fs.stat@2.0.5':
@@ -1122,7 +1158,7 @@ packages:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
 
   concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==, tarball: https://bahnhub.tech.rz.db.de/artifactory/api/npm/default-npm-3rdparty/concat-map/-/concat-map-0.0.1.tgz}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -1479,7 +1515,7 @@ packages:
     resolution: {integrity: sha512-g7df9rMFX/SPi34tyGCyUBREQoKkapwdY/T04Qn9TDWfHhAYt4/I0gMVirzK5wEzeUqIjEB+LXC/ypb7Aqno5w==}
 
   html-escaper@3.0.3:
-    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==, tarball: https://bahnhub.tech.rz.db.de/artifactory/api/npm/default-npm-3rdparty/html-escaper/-/html-escaper-3.0.3.tgz}
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
@@ -1591,7 +1627,7 @@ packages:
     hasBin: true
 
   json-buffer@3.0.1:
-    resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==, tarball: https://bahnhub.tech.rz.db.de/artifactory/api/npm/default-npm-3rdparty/json-buffer/-/json-buffer-3.0.1.tgz}
+    resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
 
   json-schema-traverse@0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
@@ -1636,7 +1672,7 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
   lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, tarball: https://bahnhub.tech.rz.db.de/artifactory/api/npm/default-npm-3rdparty/lodash/-/lodash-4.17.21.tgz}
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
@@ -2946,11 +2982,22 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
+  '@db-ux/core-components@3.1.16':
+    dependencies:
+      '@db-ux/core-foundations': 3.1.16
+
   '@db-ux/core-components@3.1.18':
     dependencies:
       '@db-ux/core-foundations': 3.1.18
 
+  '@db-ux/core-foundations@3.1.16': {}
+
   '@db-ux/core-foundations@3.1.18': {}
+
+  '@db-ux/react-core-components@3.1.16':
+    dependencies:
+      '@db-ux/core-components': 3.1.16
+      '@db-ux/core-foundations': 3.1.16
 
   '@dotenvx/dotenvx@1.51.0':
     dependencies:
