@@ -1,4 +1,14 @@
+# @db-ux/astro
+
+This is a monorepo containing various packages relating to [🚀 Astro](https://astro.build/). Astro is a web framework optimized for building fast, content-driven websites. It is an excellent match with the core `@db-ux` packages since its framework-agnostic and makes it very easy to build static or hybrid websites.
+
+The monorepo contains the following packages:
+
+- `@db-ux/astro` - An astro integration that is the core component of this repository. It makes it incredibly easy to bootstrap astro projects that make full use of our `@db-ux/core-*` packages.
+
 ## Contribution
+
+Before contributing, please make sure to familiarize yourself with our [code of conduct](CODE-OF-CONDUCT.md).
 
 ### Setup
 
