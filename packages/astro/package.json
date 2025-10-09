@@ -33,7 +33,7 @@
     "package.json"
   ],
   "scripts": {
-    "check": "astro check src"
+    "lint": "astro check src"
   },
   "peerDependencies": {
     "@db-ux/core-components": "^3.0.0",
