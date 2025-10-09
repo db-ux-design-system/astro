@@ -31,3 +31,6 @@ ctags.tmp
 /scripts/gh-pages.tar.gz
 !/scripts/tests/fixtures/out
 /astro.iml
+
+# astro files
+.astro/
