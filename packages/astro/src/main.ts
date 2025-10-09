@@ -1,6 +1,6 @@
 import type { AstroIntegration } from 'astro';
 import type { DbUxAstroConfig } from './types';
-import react from '@astrojs/react';
+// import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 
 const defaultConfig: DbUxAstroConfig = {
@@ -44,7 +44,7 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
 				// Add bundled integrations
 				const integrations: AstroIntegration[] =
 					astroConfig.integrations;
-				integrations.push(react());
+				// integrations.push(react());
 				integrations.push(mdx());
 			},
 		},

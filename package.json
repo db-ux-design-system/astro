@@ -22,7 +22,8 @@
     "lint": "eslint && prettier --check . && pnpm -r lint",
     "format": "prettier --write .",
     "build": "pnpm -r build",
-    "test": "pnpm -r test"
+    "test": "pnpm -r test",
+    "dev:astro": "cd apps/astro && pnpm dev"
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "1.51.0",

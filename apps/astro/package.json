@@ -11,12 +11,9 @@
   },
   "dependencies": {
     "astro": "5.14.1",
-    "@astrojs/react": "4.4.0",
-    "@astrojs/mdx": "4.3.6",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
     "@db-ux/core-foundations": "3.1.16",
     "@db-ux/core-components": "3.1.16",
-    "@db-ux/react-core-components": "3.1.16",
-    "react": "19.2.0"
+    "@db-ux/react-core-components": "3.1.16"
   }
 }
