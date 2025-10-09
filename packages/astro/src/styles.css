@@ -1,0 +1,4 @@
+@layer db-ux, db-ux-astro;
+
+@import "@db-ux/core-foundations/build/styles/relative.css" layer(db-ux);
+@import "@db-ux/core-components/build/styles/rollup.css" layer(db-ux);

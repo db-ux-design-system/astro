@@ -1,0 +1,12 @@
+---
+import { HtmlHead } from '../html-head';
+import '../../styles.css';
+
+const { title } = Astro.props as {
+  title: string;
+};
+---
+
+<html>
+  <HtmlHead title={title} />
+</html>

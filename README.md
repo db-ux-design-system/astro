@@ -1,6 +1,6 @@
 # @db-ux/astro
 
-![Default Workflow](https://github.com/db-ux-design-system/astro/actions/workflows/default.yml/badge.svg)
+![Default Pipeline](https://github.com/db-ux-design-system/astro/actions/workflows/default.yml/badge.svg)
 
 This is a monorepo containing various packages relating to [🚀 Astro](https://astro.build/). Astro is a web framework optimized for building fast, content-driven websites. It is an excellent match with the core `@db-ux` packages since its framework-agnostic and makes it very easy to build static or hybrid websites.
 
