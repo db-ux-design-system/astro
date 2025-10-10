@@ -1,35 +1,35 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "daily"
-      time: "23:00"
-      timezone: "Europe/Berlin"
+      interval: 'daily'
+      time: '23:00'
+      timezone: 'Europe/Berlin'
     pull-request-branch-name:
-      separator: "-"
+      separator: '-'
     cooldown:
       default-days: 7
 
   # Daily: Check minor and patch updates
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     open-pull-requests-limit: 10
     schedule:
-      interval: "daily"
-      time: "23:00"
-      timezone: "Europe/Berlin"
+      interval: 'daily'
+      time: '23:00'
+      timezone: 'Europe/Berlin'
     cooldown:
       default-days: 3
     pull-request-branch-name:
-      separator: "-"
+      separator: '-'
     # https://github.com/dependabot/dependabot-core/issues/5226#issuecomment-1179434437
     versioning-strategy: increase
     groups:
       # Automatically group all patch updates to reduce PR noise
       patch-dependencies:
         update-types:
-          - "patch"
+          - 'patch'
         patterns:
-          - "*"
+          - '*'

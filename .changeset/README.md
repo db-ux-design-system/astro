@@ -76,31 +76,31 @@ You don’t have to run anything manually, it’s handled by CI.
 
 - **Always add a changeset**
 
-    If your code change affects published packages, create a changeset.
+  If your code change affects published packages, create a changeset.
 
-    No changeset → no version bump → no release.
+  No changeset → no version bump → no release.
 
 - **Choose the correct bump type**
-    - patch: bugfix, no API or HTML changes
-    - minor: new features, changes in inner component markup or behavior, backwards-compatible
-    - major: breaking changes (e.g. removed props, changed APIs)
+  - patch: bugfix, no API or HTML changes
+  - minor: new features, changes in inner component markup or behavior, backwards-compatible
+  - major: breaking changes (e.g. removed props, changed APIs)
 
 - **Write user-friendly summaries**
 
-    The text you provide will be copied into the `CHANGELOG.md`. Keep it concise and helpful.
+  The text you provide will be copied into the `CHANGELOG.md`. Keep it concise and helpful.
 
 - **One changeset per PR**
 
-    Usually you only need one. If a PR touches multiple packages with different bump types, a single changeset can cover them all.
+  Usually you only need one. If a PR touches multiple packages with different bump types, a single changeset can cover them all.
 
 - **Baseline snapshots**
 
-    ARIA snapshots by Playwright help detect markup changes. If they change, prefer minor instead of patch.
-    And please mention those HTML changes within the `CHANGELOG.md` or of necessary (like bigger changes) in a [migration guide](https://github.com/db-ux-design-system/astro/tree/main/docs/migration).
+  ARIA snapshots by Playwright help detect markup changes. If they change, prefer minor instead of patch.
+  And please mention those HTML changes within the `CHANGELOG.md` or of necessary (like bigger changes) in a [migration guide](https://github.com/db-ux-design-system/astro/tree/main/docs/migration).
 
 - **Avoid manual version bumps**
 
-    Never edit `package.json` `version` field by hand. Changesets handles this automatically.
+  Never edit `package.json` `version` field by hand. Changesets handles this automatically.
 
 ---
 
@@ -110,9 +110,7 @@ We handle pre-releases without changesets.
 Instead, create a new [GitHub release](https://github.com/db-ux-design-system/astro/releases/new)
 with a tag like `1.2.3-next0` and the CI will pick it up and publish it to npm with the tag `next`.
 
-
 ---
-
 
 ## 🔑 Cheatsheet
 

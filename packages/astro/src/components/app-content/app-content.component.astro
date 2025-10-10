@@ -1,0 +1,22 @@
+---
+
+---
+
+<main>
+  <article>
+    <slot />
+  </article>
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  article {
+    max-width: var(--dba-max-content-width);
+    margin: 0 auto;
+  }
+</style>

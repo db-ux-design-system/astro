@@ -1,0 +1,19 @@
+{
+  "name": "test-app-astro",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "5.14.1",
+    "@db-ux/astro": "workspace:@db-ux/astro@*",
+    "@db-ux/core-foundations": "3.1.16",
+    "@db-ux/core-components": "3.1.16",
+    "@db-ux/react-core-components": "3.1.16"
+  }
+}

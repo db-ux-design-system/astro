@@ -1,0 +1,14 @@
+:root {
+  --dba-max-content-width: 1440px;
+  --dba-content-padding: 16px;
+}
+
+/*
+For breakpoints, see:
+https://github.com/db-ux-design-system/core-web/blob/main/packages/foundations/scss/_screen-sizes.scss
+*/
+@media screen and (max-width: 1023px) {
+  :root {
+    --dba-max-content-width: 100%;
+  }
+}

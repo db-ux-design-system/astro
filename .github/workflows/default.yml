@@ -4,16 +4,11 @@ on:
   pull_request:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
-
-  scan-secrets:
-    # disable secret scanning on "main" branch (because truffleHog has issues with this) and check for a fork as the source that's heading on the main branch, which would fail as well.
-    if: github.event.pull_request == null || github.event.pull_request.head.repo.owner.login == 'db-ux-design-system'
-    uses: ./.github/workflows/00-scan-secrets.yml
 
   build:
     uses: ./.github/workflows/01-build.yml
@@ -29,3 +24,8 @@ jobs:
     uses: ./.github/workflows/01-test.yml
     needs: [init]
     secrets: inherit
+
+  deploy:
+    uses: ./.github/workflows/02-deploy-gh-pages.yml
+    if: ${{ github.event.pull_request == null  }}
+    needs: [build, lint, test]

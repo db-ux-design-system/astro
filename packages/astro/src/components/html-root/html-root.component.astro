@@ -1,0 +1,29 @@
+---
+import { HtmlHead } from '../html-head';
+import '../../styles.css';
+import { AppFooter } from '../app-footer';
+
+const { title } = Astro.props as {
+  title: string;
+};
+---
+
+<html>
+  <HtmlHead title={title} />
+  <body>
+    <slot />
+    <AppFooter />
+  </body>
+</html>
+
+<style>
+  html {
+    width: 100svw;
+    height: 100svh;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

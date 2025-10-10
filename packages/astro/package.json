@@ -1,0 +1,55 @@
+{
+  "name": "@db-ux/astro",
+  "version": "0.0.1",
+  "description": "DB UX Design System - Astro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/db-ux-design-system/astro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/db-ux-design-system/astro/issues"
+  },
+  "author": "DB Systel GmbH",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/main.ts"
+    },
+    "./components": {
+      "import": "./src/components/index.ts"
+    },
+    "./layouts/default": {
+      "import": "./src/layouts/default/index.ts"
+    },
+    "./styles": {
+      "import": "./src/styles.css"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "lint": "astro check src"
+  },
+  "peerDependencies": {
+    "@db-ux/core-components": "^3.0.0",
+    "@db-ux/core-foundations": "^3.0.0",
+    "astro": "^5.0.0"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "4.3.6",
+    "@astrojs/react": "4.4.0",
+    "@spuxx/browser-utils": "1.12.0",
+    "react": "19.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.4",
+    "astro": "5.14.1",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.14.0"
+}
