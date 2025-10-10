@@ -1,6 +1,9 @@
 ---
 name: Validate
 
+permissions:
+  contents: read
+
 on:
   workflow_call:
 
