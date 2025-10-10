@@ -23,12 +23,12 @@ import { dbUxAstro } from '@db-ux/astro';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		// Add the integration
-		dbUxAstro({
-			appName: 'My awesome app',
-		}),
-	],
+  integrations: [
+    // Add the integration
+    dbUxAstro({
+      appName: 'My awesome app',
+    }),
+  ],
 });
 ```
 

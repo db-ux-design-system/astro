@@ -3,20 +3,20 @@
 import { ClientRouter } from 'astro:transitions';
 
 const { title } = Astro.props as {
-	title: string;
+  title: string;
 };
 ---
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<!-- <base href={appConfig.basePath} /> -->
-	<!-- <link
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <!-- <base href={appConfig.basePath} /> -->
+  <!-- <link
     rel="icon"
     type="image/svg+xml"
     href={`${appConfig.basePath}favicon.ico`}
   /> -->
-	<title>{title}</title>
-	<ClientRouter />
+  <title>{title}</title>
+  <ClientRouter />
 </head>

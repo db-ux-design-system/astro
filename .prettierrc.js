@@ -3,12 +3,12 @@
  * @type {import("prettier").Config}
  */
 const config = {
-	trailingComma: 'es5',
-	useTabs: false,
-	tabWidth: 2,
-	semi: true,
-	singleQuote: true,
-	plugins: ['prettier-plugin-astro'],
+  trailingComma: 'es5',
+  useTabs: false,
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  plugins: ['prettier-plugin-astro'],
 };
 
 export default config;

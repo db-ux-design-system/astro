@@ -4,18 +4,18 @@ import { HtmlRoot } from '../../components/html-root';
 import { getDbUxAstroConfig } from '../../main.ts';
 
 const { headings, frontMatter } = Astro.props as {
-	headings: any[];
-	frontMatter: any;
+  headings: any[];
+  frontMatter: any;
 };
 
 const { appName } = getDbUxAstroConfig();
 const pageTitle = frontMatter?.title
-	? `${frontMatter.title} | ${appName}`
-	: appName;
+  ? `${frontMatter.title} | ${appName}`
+  : appName;
 ---
 
 <HtmlRoot title={pageTitle}>
-	<AppContent>
-		<slot />
-	</AppContent>
+  <AppContent>
+    <slot />
+  </AppContent>
 </HtmlRoot>

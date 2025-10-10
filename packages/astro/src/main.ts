@@ -4,11 +4,11 @@ import type { DbUxAstroConfig } from './types';
 import mdx from '@astrojs/mdx';
 
 const defaultConfig: DbUxAstroConfig = {
-	appName: '@db-ux/astro',
+  appName: '@db-ux/astro',
 };
 
 let globalConfig: DbUxAstroConfig = {
-	...defaultConfig,
+  ...defaultConfig,
 };
 
 /**
@@ -16,7 +16,7 @@ let globalConfig: DbUxAstroConfig = {
  * @returns The configuration object.
  */
 export function getDbUxAstroConfig(): DbUxAstroConfig {
-	return globalConfig;
+  return globalConfig;
 }
 
 /**
@@ -34,20 +34,20 @@ export function getDbUxAstroConfig(): DbUxAstroConfig {
  * ```
  */
 export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
-	return {
-		name: '@db-ux/astro',
-		hooks: {
-			'astro:config:setup': ({ config: astroConfig }) => {
-				// Store the config globally during setup
-				globalConfig = config;
+  return {
+    name: '@db-ux/astro',
+    hooks: {
+      'astro:config:setup': ({ config: astroConfig }) => {
+        // Store the config globally during setup
+        globalConfig = config;
 
-				// Add bundled integrations
-				const integrations: AstroIntegration[] = astroConfig.integrations;
-				// integrations.push(react());
-				integrations.push(mdx());
-			},
-		},
-	};
+        // Add bundled integrations
+        const integrations: AstroIntegration[] = astroConfig.integrations;
+        // integrations.push(react());
+        integrations.push(mdx());
+      },
+    },
+  };
 }
 
 export * from './types';

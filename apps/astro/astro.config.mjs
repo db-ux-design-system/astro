@@ -5,12 +5,12 @@ import { dbUxAstro } from '@db-ux/astro';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		dbUxAstro({
-			appName: 'astro',
-		}),
-	],
-	devToolbar: {
-		enabled: false,
-	},
+  integrations: [
+    dbUxAstro({
+      appName: 'astro',
+    }),
+  ],
+  devToolbar: {
+    enabled: false,
+  },
 });
