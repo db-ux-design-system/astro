@@ -1,0 +1,16 @@
+pre.astro-code {
+  /* background-color: var(
+    --db-adaptive-bg-inverted-contrast-max-default
+  ) !important; */
+}
+
+pre {
+  border-radius: var(--db-border-radius-xs);
+  display: flex;
+}
+
+code {
+  background-color: #24292e;
+  color: #e1e4e8;
+  border-radius: var(--db-border-radius-xs);
+}
