@@ -1,6 +1,9 @@
 ---
 name: Test
 
+permissions:
+  contents: read
+
 on:
   workflow_call:
 

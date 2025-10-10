@@ -1,0 +1,34 @@
+---
+name: Deploy to gh-pages
+
+permissions:
+  contents: read
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
+    permissions:
+      contents: write
+    steps:
+      - name: ⏬ Checkout repo
+        uses: actions/checkout@v5
+
+      - name: 🔄 Init PNPM
+        uses: ./.github/actions/pnpm-init
+
+      - name: ⏬ Download patternhub
+        uses: actions/download-artifact@v5
+        with:
+          name: astro-app
+          path: apps/astro/dist
+
+      - name: 🥅 Deploy to GH-Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./apps/astro/dist
+
