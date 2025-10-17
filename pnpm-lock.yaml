@@ -48,8 +48,8 @@ importers:
         specifier: 3.1.20
         version: 3.1.20
       '@db-ux/react-core-components':
-        specifier: 3.1.20
-        version: 3.1.20
+        specifier: 4.0.0
+        version: 4.0.0
       astro:
         specifier: 5.14.5
         version: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
@@ -230,9 +230,6 @@ packages:
   '@db-ux/core-components@3.1.16':
     resolution: {integrity: sha512-NTP0ywEQpeT6k1DgVc/IbQRk2LUJoTyazuv4L2kgNg8JZEcRGEtBry6OhTpqp15SlBQYeJ5XL3rjbuPnwJ0/CA==}
 
-  '@db-ux/core-components@3.1.20':
-    resolution: {integrity: sha512-d3T9/cTEaaOTlQA9NMc7YgpaZGV781hSDG8A3pOWLL7oc5MFOzKFINoaquwBiUcb6UgoDJsjZNwe5ZXnFY0Elg==}
-
   '@db-ux/core-components@4.0.0':
     resolution: {integrity: sha512-0dHHXHwxYBiE9+JQPqbgnBA0nvdoTOY2W6KTyxR4U6lrzSTKZKawziw+yZVY6+MUWuhVcIfpAU57Azw9cpibLA==}
 
@@ -245,8 +242,8 @@ packages:
   '@db-ux/core-foundations@4.0.0':
     resolution: {integrity: sha512-GTGstGO+SwGvrkzmMs8qxmQNyzQe3GR8S2EK3SogAjks7yjlkZoTDPwWcVIt90Re3IFY4VS+Fg+S/M7vKtFZpw==}
 
-  '@db-ux/react-core-components@3.1.20':
-    resolution: {integrity: sha512-dS0LiTk1xJYqS6B4VdszLHhMEfu2s9dQICCJ7fZiXVEd+aUNk/ceRVHs5eeEnh2PVZuuzA0RZ3klJD+NkS2sZA==}
+  '@db-ux/react-core-components@4.0.0':
+    resolution: {integrity: sha512-1yXv0sq/hD/nK8KlJhIslFoOp+c4DZWtDJ45B1iQ3oVXV65U5ZMwVZGbdpGxltCjxTSXyRbmMGI12RsxL3YPMA==}
 
   '@dotenvx/dotenvx@1.51.0':
     resolution: {integrity: sha512-CbMGzyOYSyFF7d4uaeYwO9gpSBzLTnMmSmTVpCZjvpJFV69qYbjYPpzNnCz1mb2wIvEhjWjRwQWuBzTO0jITww==}
@@ -2999,10 +2996,6 @@ snapshots:
     dependencies:
       '@db-ux/core-foundations': 3.1.16
 
-  '@db-ux/core-components@3.1.20':
-    dependencies:
-      '@db-ux/core-foundations': 3.1.20
-
   '@db-ux/core-components@4.0.0':
     dependencies:
       '@db-ux/core-foundations': 4.0.0
@@ -3013,10 +3006,10 @@ snapshots:
 
   '@db-ux/core-foundations@4.0.0': {}
 
-  '@db-ux/react-core-components@3.1.20':
+  '@db-ux/react-core-components@4.0.0':
     dependencies:
-      '@db-ux/core-components': 3.1.20
-      '@db-ux/core-foundations': 3.1.20
+      '@db-ux/core-components': 4.0.0
+      '@db-ux/core-foundations': 4.0.0
 
   '@dotenvx/dotenvx@1.51.0':
     dependencies:
