@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.14.6",
+    "astro": "5.14.7",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
-    "@db-ux/core-foundations": "4.0.1",
-    "@db-ux/core-components": "4.0.1",
-    "@db-ux/react-core-components": "4.0.1"
+    "@db-ux/core-foundations": "4.0.2",
+    "@db-ux/core-components": "4.0.2",
+    "@db-ux/react-core-components": "4.0.2"
   }
 }
