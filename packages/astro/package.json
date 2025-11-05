@@ -36,17 +36,18 @@
     "lint": "astro check src"
   },
   "peerDependencies": {
+    "@astrojs/react": "^4.4.0",
     "@db-ux/core-components": "^4.0.0",
     "@db-ux/core-foundations": "^4.0.0",
-    "@db-ux/react-core-components": "^4.0.0",
     "@db-ux/db-theme-icons": "^3.3.0",
+    "@db-ux/react-core-components": "^4.0.0",
     "astro": "^5.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "@astrojs/react": "^4.4.0"
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@astrojs/mdx": "4.3.6",
+    "@orama/orama": "^3.1.16",
     "@spuxx/browser-utils": "1.13.0",
     "@spuxx/js-utils": "2.1.0"
   },
@@ -54,14 +55,14 @@
     "@astrojs/check": "0.9.4",
     "@db-ux/core-components": "4.0.2",
     "@db-ux/core-foundations": "4.0.2",
-    "@db-ux/react-core-components": "4.0.2",
     "@db-ux/db-theme-icons": "3.3.0",
+    "@db-ux/react-core-components": "4.0.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "astro": "5.14.1",
-    "typescript": "5.9.3",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.14.0"
 }

@@ -9,6 +9,10 @@ export const de: Record<string, unknown> = {
     label: 'Dunkler Modus',
   },
   notification: { close: 'Meldung schließen' },
+  search: {
+    open: 'Suche öffnen',
+    'no-results': 'Keine Ergebnisse gefunden',
+  },
 };
 
 export const en: Record<string, unknown> = {
@@ -22,4 +26,8 @@ export const en: Record<string, unknown> = {
     label: 'Dark Mode',
   },
   notification: { close: 'Close notification' },
+  search: {
+    open: 'Open search',
+    'no-results': 'No results found',
+  },
 };

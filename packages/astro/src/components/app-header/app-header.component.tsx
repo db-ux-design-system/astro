@@ -3,7 +3,7 @@ import { Brand } from './brand.component';
 // import { Navigation } from './navigation';
 import { DBHeader } from '@db-ux/react-core-components';
 import { ThemeSwitch } from './theme-switch.component';
-// import { Search } from './search';
+import { Search } from './search.component';
 
 export function AppHeader(): ReactElement {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
@@ -14,7 +14,7 @@ export function AppHeader(): ReactElement {
       drawerOpen={drawerOpen}
       onToggle={setDrawerOpen}
       brand={<Brand />}
-      // primaryAction={<Search />}
+      primaryAction={<Search />}
       secondaryAction={<ThemeSwitch />}
     >
       {/* <Navigation /> */}

@@ -6,7 +6,7 @@ import { dbUxAstro } from '@db-ux/astro';
 export default defineConfig({
   integrations: [
     dbUxAstro({
-      appName: 'astro',
+      appName: '@db-ux/astro',
     }),
   ],
   site: 'https://design-system.deutschebahn.com/',
