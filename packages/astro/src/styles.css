@@ -1,7 +1,8 @@
 @layer db-ux, db-ux-astro;
 
-@import '@db-ux/core-foundations/build/styles/relative.css' layer(db-ux);
+@import '@db-ux/core-foundations/build/styles/rollup.css' layer(db-ux);
 @import '@db-ux/core-components/build/styles/rollup.css' layer(db-ux);
+/* @import '@db-ux/db-theme-icons/build/styles/rollup.css' layer(db-ux); */
 
 @import './styles/db-ux-overrides.css' layer(db-ux-astro);
 @import './styles/variables.css' layer(db-ux-astro);

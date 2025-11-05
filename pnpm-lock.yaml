@@ -38,21 +38,33 @@ importers:
 
   apps/astro:
     dependencies:
+      '@astrojs/react':
+        specifier: 4.4.0
+        version: 4.4.0(@types/node@24.7.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
       '@db-ux/astro':
         specifier: workspace:@db-ux/astro@*
         version: link:../../packages/astro
       '@db-ux/core-components':
-        specifier: 3.1.16
-        version: 3.1.16
+        specifier: 4.0.2
+        version: 4.0.2
       '@db-ux/core-foundations':
-        specifier: 3.1.16
-        version: 3.1.16
+        specifier: 4.0.2
+        version: 4.0.2
+      '@db-ux/db-theme-icons':
+        specifier: 3.3.0
+        version: 3.3.0
       '@db-ux/react-core-components':
-        specifier: 3.1.16
-        version: 3.1.16
+        specifier: 4.0.2
+        version: 4.0.2
       astro:
         specifier: 5.14.1
         version: 5.14.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: 19.2.0
+        version: 19.2.0(react@19.2.0)
 
   packages/astro:
     dependencies:
@@ -60,27 +72,45 @@ importers:
         specifier: 4.3.6
         version: 4.3.6(astro@5.14.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1))
       '@astrojs/react':
-        specifier: 4.4.0
-        version: 4.4.0(@types/node@24.7.1)(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
-      '@db-ux/core-components':
-        specifier: ^3.0.0
-        version: 3.1.16
-      '@db-ux/core-foundations':
-        specifier: ^3.0.0
-        version: 3.1.16
+        specifier: ^4.4.0
+        version: 4.4.0(@types/node@24.7.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
       '@spuxx/browser-utils':
-        specifier: 1.12.0
-        version: 1.12.0
-      react:
-        specifier: 19.2.0
-        version: 19.2.0
+        specifier: 1.13.0
+        version: 1.13.0
+      '@spuxx/js-utils':
+        specifier: 2.1.0
+        version: 2.1.0
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
+      '@db-ux/core-components':
+        specifier: 4.0.2
+        version: 4.0.2
+      '@db-ux/core-foundations':
+        specifier: 4.0.2
+        version: 4.0.2
+      '@db-ux/db-theme-icons':
+        specifier: 3.3.0
+        version: 3.3.0
+      '@db-ux/react-core-components':
+        specifier: 4.0.2
+        version: 4.0.2
+      '@types/react':
+        specifier: 19.2.2
+        version: 19.2.2
+      '@types/react-dom':
+        specifier: 19.2.2
+        version: 19.2.2(@types/react@19.2.2)
       astro:
         specifier: 5.14.1
         version: 5.14.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: 19.2.0
+        version: 19.2.0(react@19.2.0)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -226,14 +256,17 @@ packages:
   '@capsizecss/unpack@2.4.0':
     resolution: {integrity: sha512-GrSU71meACqcmIUxPYOJvGKF0yryjN/L1aCuE9DViCTJI7bfkjgYDPD1zbNDcINJwSSP6UaBZY9GAbYDO7re0Q==}
 
-  '@db-ux/core-components@3.1.16':
-    resolution: {integrity: sha512-NTP0ywEQpeT6k1DgVc/IbQRk2LUJoTyazuv4L2kgNg8JZEcRGEtBry6OhTpqp15SlBQYeJ5XL3rjbuPnwJ0/CA==}
+  '@db-ux/core-components@4.0.2':
+    resolution: {integrity: sha512-VDeyQjynxvDLETOenMLErSmBTuru5DiQAlrixvpm1ljFbhcwSi6bGB0/HWeSL0UO/JGV2BLfONTu037MmGwzcQ==}
 
-  '@db-ux/core-foundations@3.1.16':
-    resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
+  '@db-ux/core-foundations@4.0.2':
+    resolution: {integrity: sha512-+LnXO8y0tQRaoSmZYenVTWqAh6X8kLSchbwIX/VvR+Cqy+Bi+m4mRTyINczLfpIuAa1I7R4R70xnqQCeUchuiw==}
 
-  '@db-ux/react-core-components@3.1.16':
-    resolution: {integrity: sha512-G5NR7OKc0DPqglo5jOamLlrMLKU2KBdc+GxfLyRIot6qOqyoJCdpEIIWJfdFhe5tfhipPEZF6HzjgntNRCc7gQ==}
+  '@db-ux/db-theme-icons@3.3.0':
+    resolution: {integrity: sha512-EqDwzq8TfaATCE2pgF82UH+XzCpUP2twhT+2glJn08N4nljN5dE42XiIjCR+apZgMylmY82lYNCNu5NttMKYZw==}
+
+  '@db-ux/react-core-components@4.0.2':
+    resolution: {integrity: sha512-8QUtw05YYnANJEu/jqt3RVI4yoFpwSTyNErm4TywFGfJCAnbrICvrObneN2uUtlk9Djz3J9ap7GCUUCnYtWZyw==}
 
   '@dotenvx/dotenvx@1.51.0':
     resolution: {integrity: sha512-CbMGzyOYSyFF7d4uaeYwO9gpSBzLTnMmSmTVpCZjvpJFV69qYbjYPpzNnCz1mb2wIvEhjWjRwQWuBzTO0jITww==}
@@ -794,13 +827,21 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@spuxx/browser-utils@1.12.0':
-    resolution: {integrity: sha512-xwphU0wo9a9rHZrDPuLxuFCOHeaDTOIOTmlMhwf/xeAYoVQK6VPoGeQ6cepYRchraoG8gp/2OI+YIZ/ziRElBQ==}
+  '@spuxx/browser-utils@1.13.0':
+    resolution: {integrity: sha512-oy2xKf+Q0S0Xr97CfoEOFRiexzacx69aD16LQgENXmsL6wMQhB9RYR5ZyfcgBSblyN8Q29YeDdKHd8NCqKL+sA==}
 
   '@spuxx/js-utils@1.3.0':
     resolution: {integrity: sha512-ub2qDE3/tJ8x8AYNiX1zjapMD3oIYlttIAzsHWYzj5hYRZVQt4r0zWtZDEAL5ZyVQ1Xi2TcnfCRUORqgtq/moA==}
     peerDependencies:
       '@modyfi/vite-plugin-yaml': 1.1.0
+    peerDependenciesMeta:
+      '@modyfi/vite-plugin-yaml':
+        optional: true
+
+  '@spuxx/js-utils@2.1.0':
+    resolution: {integrity: sha512-+g878KAB+/lldVRYDewmLETUijw8KyWRnxz0wAwX3E3Q+3RMaYpwsg4apI3m7QRbgeQULo520qqDrop95ySQeg==}
+    peerDependencies:
+      '@modyfi/vite-plugin-yaml': ^1.1.0
     peerDependenciesMeta:
       '@modyfi/vite-plugin-yaml':
         optional: true
@@ -853,8 +894,8 @@ packages:
   '@types/node@24.7.1':
     resolution: {integrity: sha512-CmyhGZanP88uuC5GpWU9q+fI61j2SkhO3UGMUdfYRE6Bcy0ccyzn1Rqj9YAB/ZY4kOXmNf0ocah5GtphmLMP6Q==}
 
-  '@types/react-dom@19.2.1':
-    resolution: {integrity: sha512-/EEvYBdT3BflCWvTMO7YkYBHVE9Ci6XdqZciZANQgKpaiDRGOLIlRo91jbTNRQjgPFWVaRxcYc0luVNFitz57A==}
+  '@types/react-dom@19.2.2':
+    resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
     peerDependencies:
       '@types/react': ^19.2.0
 
@@ -2811,10 +2852,10 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@4.4.0(@types/node@24.7.1)(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)':
+  '@astrojs/react@4.4.0(@types/node@24.7.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)':
     dependencies:
       '@types/react': 19.2.2
-      '@types/react-dom': 19.2.1(@types/react@19.2.2)
+      '@types/react-dom': 19.2.2(@types/react@19.2.2)
       '@vitejs/plugin-react': 4.7.0(vite@6.3.6(@types/node@24.7.1)(yaml@2.8.1))
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
@@ -2970,16 +3011,18 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@db-ux/core-components@3.1.16':
+  '@db-ux/core-components@4.0.2':
     dependencies:
-      '@db-ux/core-foundations': 3.1.16
+      '@db-ux/core-foundations': 4.0.2
 
-  '@db-ux/core-foundations@3.1.16': {}
+  '@db-ux/core-foundations@4.0.2': {}
 
-  '@db-ux/react-core-components@3.1.16':
+  '@db-ux/db-theme-icons@3.3.0': {}
+
+  '@db-ux/react-core-components@4.0.2':
     dependencies:
-      '@db-ux/core-components': 3.1.16
-      '@db-ux/core-foundations': 3.1.16
+      '@db-ux/core-components': 4.0.2
+      '@db-ux/core-foundations': 4.0.2
 
   '@dotenvx/dotenvx@1.51.0':
     dependencies:
@@ -3427,13 +3470,15 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@spuxx/browser-utils@1.12.0':
+  '@spuxx/browser-utils@1.13.0':
     dependencies:
       '@spuxx/js-utils': 1.3.0
     transitivePeerDependencies:
       - '@modyfi/vite-plugin-yaml'
 
   '@spuxx/js-utils@1.3.0': {}
+
+  '@spuxx/js-utils@2.1.0': {}
 
   '@swc/helpers@0.5.17':
     dependencies:
@@ -3496,7 +3541,7 @@ snapshots:
     dependencies:
       undici-types: 7.14.0
 
-  '@types/react-dom@19.2.1(@types/react@19.2.2)':
+  '@types/react-dom@19.2.2(@types/react@19.2.2)':
     dependencies:
       '@types/react': 19.2.2
 

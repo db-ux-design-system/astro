@@ -23,6 +23,7 @@
     "format": "prettier --write .",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
+    "dev": "pnpm dev:astro",
     "dev:astro": "pnpm --filter test-app-astro dev"
   },
   "devDependencies": {

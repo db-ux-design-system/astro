@@ -10,10 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.14.1",
+    "@astrojs/react": "4.4.0",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
-    "@db-ux/core-foundations": "3.1.16",
-    "@db-ux/core-components": "3.1.16",
-    "@db-ux/react-core-components": "3.1.16"
-  }
+    "@db-ux/core-components": "4.0.2",
+    "@db-ux/core-foundations": "4.0.2",
+    "@db-ux/react-core-components": "4.0.2",
+    "@db-ux/db-theme-icons": "3.3.0",
+    "astro": "5.14.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "packageManager": "pnpm@10.14.0"
 }

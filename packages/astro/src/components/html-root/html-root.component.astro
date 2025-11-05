@@ -16,6 +16,12 @@ const { title } = Astro.props as {
   </body>
 </html>
 
+<script>
+  import { BuiltinIntl } from '../../services/intl.service';
+
+  BuiltinIntl.setup();
+</script>
+
 <style>
   html {
     width: 100svw;

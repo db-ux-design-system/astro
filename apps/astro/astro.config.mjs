@@ -1,5 +1,4 @@
 // @ts-check
-
 import { defineConfig } from 'astro/config';
 import { dbUxAstro } from '@db-ux/astro';
 
@@ -14,5 +13,8 @@ export default defineConfig({
   base: '/astro/',
   devToolbar: {
     enabled: false,
+  },
+  build: {
+    inlineStylesheets: 'always',
   },
 });
