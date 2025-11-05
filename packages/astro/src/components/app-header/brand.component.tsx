@@ -1,10 +1,11 @@
 import type { ReactElement } from 'react';
+import { getDbUxAstroConfig } from '../../config';
 
 export function Brand(): ReactElement {
-  const { appName, basePath } = import.meta.env.DB_UX_ASTRO_CONFIG;
+  const { appName, base } = getDbUxAstroConfig();
 
   return (
-    <a className="db-brand" data-icon="db" href={basePath} title="Home">
+    <a className="db-brand" data-icon="db" href={base} title="Home">
       {appName}
     </a>
   );

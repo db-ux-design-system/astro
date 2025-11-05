@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro';
-import type { DbUxAstroConfig } from './types';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
+import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
 
 const defaultConfig: DbUxAstroConfig = {
   appName: '@db-ux/astro',
@@ -10,14 +10,6 @@ const defaultConfig: DbUxAstroConfig = {
 let globalConfig: DbUxAstroConfig = {
   ...defaultConfig,
 };
-
-/**
- * Get the current `@db-ux/astro` configuration.
- * @returns The configuration object.
- */
-export function getDbUxAstroConfig(): DbUxAstroConfig {
-  return globalConfig;
-}
 
 /**
  * The `@db-ux/astro` integration for Astro projects.
@@ -40,6 +32,12 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
       'astro:config:setup': ({ config: astroConfig, updateConfig }) => {
         // Store the config globally during setup
         globalConfig = config;
+        const combinedConfig: CombinedConfig = {
+          ...globalConfig,
+          base: astroConfig.base || '/',
+          site: astroConfig.site,
+        };
+        console.log(combinedConfig);
 
         // Add bundled integrations
         const integrations: AstroIntegration[] = astroConfig.integrations;
@@ -50,11 +48,7 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
         updateConfig({
           vite: {
             define: {
-              'import.meta.env.DB_UX_ASTRO_CONFIG': JSON.stringify({
-                ...globalConfig,
-                basePath: astroConfig.base || '/',
-                site: astroConfig.site,
-              }),
+              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
             },
             resolve: {
               alias: {
@@ -69,4 +63,4 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
   };
 }
 
-export * from './types';
+export * from './config/index';

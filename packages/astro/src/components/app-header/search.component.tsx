@@ -17,6 +17,7 @@ import {
 import { BuiltinIntl } from '../../services/intl.service';
 import { useDebounce } from '../../hooks/use-debounce.hook';
 import { getMarkedContent } from '../../utils/search.utils';
+import { getDbUxAstroConfig } from '../../config';
 
 type PageSchema = {
   path: string;
@@ -42,7 +43,7 @@ export function Search(): ReactElement {
       const db = create({ schema: { _: 'string' } });
 
       const dbResponse = await fetch(
-        `${import.meta.env.BASE_URL}/assets/oramaDB_pages.json`
+        `${getDbUxAstroConfig().base}assets/oramaDB_pages.json`
       );
       if (dbResponse.ok) {
         const dbData = (await dbResponse.json()) as RawData;
@@ -81,8 +82,8 @@ export function Search(): ReactElement {
       <DBDrawer open={searchOpen} onClose={() => setSearchOpen(false)}>
         <div className="dba-search-result-container">
           <DBInput
-            label="Search"
-            placeholder="Search"
+            label={BuiltinIntl.translate('search.input-label')}
+            placeholder={BuiltinIntl.translate('search.input-placeholder')}
             icon="magnifying_glass"
             variant="floating"
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
@@ -100,7 +101,7 @@ export function Search(): ReactElement {
               return (
                 <a
                   key={hit.document.path}
-                  href={`${import.meta.env.BASE_URL}${hit.document.path.replace('/', '')}`}
+                  href={`${getDbUxAstroConfig().base}${hit.document.path.replace('/', '')}`}
                 >
                   <DBCard>
                     <span className="bold">{hit.document.h1}</span>

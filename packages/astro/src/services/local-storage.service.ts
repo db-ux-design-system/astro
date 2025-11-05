@@ -1,12 +1,11 @@
 import { LocalStorageMixin } from '@spuxx/browser-utils';
+import { getDbUxAstroConfig } from '../config';
 
 export interface ILocalStorage {
   theme: 'light' | 'dark';
 }
 export class LocalStorage extends LocalStorageMixin<ILocalStorage>({
-  key: import.meta.env.DB_UX_ASTRO_CONFIG.appName
-    .toLocaleLowerCase()
-    .replaceAll(' ', '-'),
+  key: getDbUxAstroConfig().appName.toLocaleLowerCase().replaceAll(' ', '-'),
   defaultValues: {
     theme:
       window.matchMedia &&
