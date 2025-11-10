@@ -17,7 +17,7 @@
       "import": "./src/main.ts"
     },
     "./components": {
-      "import": "./src/components/index.ts"
+      "import": "./src/components.ts"
     },
     "./layouts/default": {
       "import": "./src/layouts/default/index.ts"

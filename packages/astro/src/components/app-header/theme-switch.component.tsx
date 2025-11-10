@@ -1,4 +1,3 @@
-// import { ColorSchemeSwitch, type ColorScheme } from "@firefly/react";
 import { DBSwitch } from '@db-ux/react-core-components';
 import { LocalStorage } from '../../services/local-storage.service.ts';
 import { useEffect, useState, type ReactElement } from 'react';

@@ -37,7 +37,6 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
           base: astroConfig.base || '/',
           site: astroConfig.site,
         };
-        console.log(combinedConfig);
 
         // Add bundled integrations
         const integrations: AstroIntegration[] = astroConfig.integrations;
@@ -49,12 +48,6 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
           vite: {
             define: {
               'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
-            },
-            resolve: {
-              alias: {
-                '@db-ux/db-theme-icons/build/fonts':
-                  '/node_modules/@db-ux/db-theme-icons/build/fonts',
-              },
             },
           },
         });

@@ -1,0 +1,87 @@
+.dba-carousel {
+  width: 70%;
+  padding-bottom: 2em;
+  flex-direction: column;
+  margin: auto;
+
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    figure {
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figcaption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        backdrop-filter: blur(10px) brightness(0.6);
+        text-align: center;
+        padding: 0.5em 0;
+        font-size: 0.9rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.dba-carousel-viewport-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 10px #0003);
+}
+
+.dba-carousel-navigation-list {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dba-carousel-navigation-list button[data-icon='chevron_left'],
+.dba-carousel-navigation-list button[data-icon='chevron_left']::before,
+.dba-carousel-navigation-list button[data-icon='chevron_right'],
+.dba-carousel-navigation-list button[data-icon='chevron_right']::before {
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0;
+}
+
+.dba-carousel-navigation-list button[data-icon='chevron_left'] {
+  margin-right: 1rem;
+}
+
+.dba-carousel-navigation-list button[data-icon='chevron_right'] {
+  margin-left: 1rem;
+}
+
+.dba-carousel-navigation-list-button {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border: var(--db-border-width-3xs) solid
+    var(--db-adaptive-on-bg-basic-emphasis-60-default);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.carousel-navigation-list-button[data-active] {
+  background-color: var(--db-brand-origin-default);
+  cursor: default;
+  pointer-events: none;
+}

@@ -7,3 +7,4 @@
 @import './styles/db-ux-overrides.css' layer(db-ux-astro);
 @import './styles/variables.css' layer(db-ux-astro);
 @import './styles/search.css' layer(db-ux-astro);
+@import './styles/carousel.css' layer(db-ux-astro);

@@ -14,8 +14,8 @@ export function AppHeader(): ReactElement {
       drawerOpen={drawerOpen}
       onToggle={setDrawerOpen}
       brand={<Brand />}
-      primaryAction={<Search />}
-      secondaryAction={<ThemeSwitch />}
+      // primaryAction={<Search />}
+      // secondaryAction={<ThemeSwitch />}
     >
       {/* <Navigation /> */}
     </DBHeader>
