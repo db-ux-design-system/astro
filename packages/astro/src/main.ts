@@ -1,14 +1,14 @@
 import type { AstroIntegration } from 'astro';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import orama from '@orama/plugin-astro';
 import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
+import { filterSitemapBlacklist } from './utils/sitemap.utils';
 
 const defaultConfig: DbUxAstroConfig = {
   appName: '@db-ux/astro',
-};
-
-let globalConfig: DbUxAstroConfig = {
-  ...defaultConfig,
+  sitemapBlacklist: [],
 };
 
 /**
@@ -30,27 +30,49 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
     name: '@db-ux/astro',
     hooks: {
       'astro:config:setup': ({ config: astroConfig, updateConfig }) => {
-        // Store the config globally during setup
-        globalConfig = config;
+        // Initialize config
         const combinedConfig: CombinedConfig = {
-          ...globalConfig,
+          ...defaultConfig,
+          ...config,
           base: astroConfig.base || '/',
           site: astroConfig.site,
         };
+        // Make config also available client-side through vite.define
+        updateConfig({
+          build: {
+            inlineStylesheets: 'always',
+          },
+          vite: {
+            define: {
+              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
+            },
+            resolve: {
+              alias: {
+                // Allow directory imports to resolve to index files
+                '@db-ux/react-core-components':
+                  '@db-ux/react-core-components/dist/index.js',
+              },
+            },
+          },
+        });
 
         // Add bundled integrations
         const integrations: AstroIntegration[] = astroConfig.integrations;
         integrations.push(react());
         integrations.push(mdx());
-
-        // Make config also available client-side through vite.define
-        updateConfig({
-          vite: {
-            define: {
-              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
+        integrations.push(
+          orama({
+            pages: {
+              pathMatcher: new RegExp('\/.+\/'),
+              language: 'english',
             },
-          },
-        });
+          })
+        );
+        integrations.push(
+          sitemap({
+            filter: (page) => filterSitemapBlacklist(page, combinedConfig),
+          })
+        );
       },
     },
   };

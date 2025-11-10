@@ -2,7 +2,16 @@
  * The config to provide to the `@db-ux/astro` integration.
  */
 export interface DbUxAstroConfig {
-  appName: string;
+  /**
+   * The name of the app.
+   * @default '@db-ux/astro'
+   */
+  appName?: string;
+  /**
+   * A list of pages to exclude from the sitemap.
+   * @default []
+   */
+  sitemapBlacklist?: string[];
 }
 
 /**
