@@ -69,8 +69,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.16
       '@spuxx/browser-utils':
-        specifier: 1.12.0
-        version: 1.12.0
+        specifier: 1.13.0
+        version: 1.13.0
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -826,8 +826,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@spuxx/browser-utils@1.12.0':
-    resolution: {integrity: sha512-xwphU0wo9a9rHZrDPuLxuFCOHeaDTOIOTmlMhwf/xeAYoVQK6VPoGeQ6cepYRchraoG8gp/2OI+YIZ/ziRElBQ==}
+  '@spuxx/browser-utils@1.13.0':
+    resolution: {integrity: sha512-oy2xKf+Q0S0Xr97CfoEOFRiexzacx69aD16LQgENXmsL6wMQhB9RYR5ZyfcgBSblyN8Q29YeDdKHd8NCqKL+sA==}
 
   '@spuxx/js-utils@1.3.0':
     resolution: {integrity: sha512-ub2qDE3/tJ8x8AYNiX1zjapMD3oIYlttIAzsHWYzj5hYRZVQt4r0zWtZDEAL5ZyVQ1Xi2TcnfCRUORqgtq/moA==}
@@ -3497,7 +3497,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@spuxx/browser-utils@1.12.0':
+  '@spuxx/browser-utils@1.13.0':
     dependencies:
       '@spuxx/js-utils': 1.3.0
     transitivePeerDependencies:
