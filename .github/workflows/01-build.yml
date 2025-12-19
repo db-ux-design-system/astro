@@ -22,7 +22,7 @@ jobs:
         run: pnpm build
 
       - name: ⏫ Upload app
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: astro-app
           path: apps/astro/dist
