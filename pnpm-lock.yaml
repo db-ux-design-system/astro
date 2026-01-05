@@ -42,14 +42,14 @@ importers:
         specifier: workspace:@db-ux/astro@*
         version: link:../../packages/astro
       '@db-ux/core-components':
-        specifier: 4.2.5
-        version: 4.2.5
+        specifier: 4.2.6
+        version: 4.2.6
       '@db-ux/core-foundations':
-        specifier: 4.2.5
-        version: 4.2.5
+        specifier: 4.2.6
+        version: 4.2.6
       '@db-ux/react-core-components':
-        specifier: 4.2.5
-        version: 4.2.5
+        specifier: 4.2.6
+        version: 4.2.6
       astro:
         specifier: 5.16.6
         version: 5.16.6(@types/node@25.0.3)(rollup@4.53.5)(typescript@5.9.3)(yaml@2.8.2)
@@ -230,17 +230,17 @@ packages:
   '@db-ux/core-components@3.1.16':
     resolution: {integrity: sha512-NTP0ywEQpeT6k1DgVc/IbQRk2LUJoTyazuv4L2kgNg8JZEcRGEtBry6OhTpqp15SlBQYeJ5XL3rjbuPnwJ0/CA==}
 
-  '@db-ux/core-components@4.2.5':
-    resolution: {integrity: sha512-KTzj64E/UHgInj6TembaTOr9UGyi6kj3V1Q/VnSGOMRVz3Is+RdgIpEa/SwUABodoVKG6P+l+UrT3eeK63NNBw==}
+  '@db-ux/core-components@4.2.6':
+    resolution: {integrity: sha512-Q59tzo2vhn/uYMNYd0wWaZ4qSZw0nkb0RbMf0z9WoW6gxAomRie2f3fNqovE8PJNOiMWB0m86isuBn2q8OMawA==}
 
   '@db-ux/core-foundations@3.1.16':
     resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
 
-  '@db-ux/core-foundations@4.2.5':
-    resolution: {integrity: sha512-1wwjZuffpes1NpqEz0AhkRd5RIRWJf7sqSRp340XTJ/xVSMwsKkyi+rsCMVX8Mjv1dQ8SNdQlP/NkGP0pOvmXg==}
+  '@db-ux/core-foundations@4.2.6':
+    resolution: {integrity: sha512-eSRG5bJimvB88ZO+p1N8FR9wE/LakSq/ujw/O7z8dJ7IqCm8Px/yTemIvig0t5K+YPn23L4z6OsC3TG/xnw4SA==}
 
-  '@db-ux/react-core-components@4.2.5':
-    resolution: {integrity: sha512-F3VsSeKMYGF7SXUbwmW4lF+G17q5yfZFgMmDLJWiEVQMWkTyfE6P01k1tiU9qeN3Her/Cq2I02zu5afe5/3XUw==}
+  '@db-ux/react-core-components@4.2.6':
+    resolution: {integrity: sha512-2Jm4yts1wXMxB1Fs6anXp7X71KgewqGsMkfB3QlxcLgmjgDXI/asmcw5XpOyLlILHIxTmmbQR+lcBTVcWnbuPQ==}
 
   '@dotenvx/dotenvx@1.51.4':
     resolution: {integrity: sha512-AoziS8lRQ3ew/lY5J4JSlzYSN9Fo0oiyMBY37L3Bwq4mOQJT5GSrdZYLFPt6pH1LApDI3ZJceNyx+rHRACZSeQ==}
@@ -3007,18 +3007,18 @@ snapshots:
     dependencies:
       '@db-ux/core-foundations': 3.1.16
 
-  '@db-ux/core-components@4.2.5':
+  '@db-ux/core-components@4.2.6':
     dependencies:
-      '@db-ux/core-foundations': 4.2.5
+      '@db-ux/core-foundations': 4.2.6
 
   '@db-ux/core-foundations@3.1.16': {}
 
-  '@db-ux/core-foundations@4.2.5': {}
+  '@db-ux/core-foundations@4.2.6': {}
 
-  '@db-ux/react-core-components@4.2.5':
+  '@db-ux/react-core-components@4.2.6':
     dependencies:
-      '@db-ux/core-components': 4.2.5
-      '@db-ux/core-foundations': 4.2.5
+      '@db-ux/core-components': 4.2.6
+      '@db-ux/core-foundations': 4.2.6
 
   '@dotenvx/dotenvx@1.51.4':
     dependencies:
