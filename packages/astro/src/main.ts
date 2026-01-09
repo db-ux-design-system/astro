@@ -107,8 +107,8 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
               },
             },
           },
-          site: astroConfig.site,
-          base: astroConfig.base,
+          site: combinedConfig.site,
+          base: combinedConfig.base,
           integrations,
         };
         updateConfig(updatedConfig);
