@@ -1,15 +1,14 @@
-import type { AstroConfig, AstroIntegration } from 'astro';
+import type { AstroIntegration } from 'astro';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import orama from '@orama/plugin-astro';
 import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
 import { filterSitemapBlacklist } from './utils/sitemap.utils';
-import type { DeepPartial } from 'node_modules/astro/dist/type-utils';
 
 const defaultConfig: DbUxAstroConfig = {
   appName: '@db-ux/astro',
-  sitemapBlacklist: ['foo'],
+  sitemapBlacklist: ['/foo'],
 };
 
 /**
@@ -31,13 +30,7 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
   return {
     name: '@db-ux/astro',
     hooks: {
-      'astro:config:setup': ({
-        config: astroConfig,
-        updateConfig,
-        logger,
-        isRestart,
-      }) => {
-        if (isRestart) return;
+      'astro:config:setup': ({ config: astroConfig, updateConfig, logger }) => {
         logger.info('Setting up integration...');
 
         // Initialize config
@@ -48,16 +41,38 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
           site: astroConfig.site,
         };
 
+        logger.info('Updating astro config...');
+        updateConfig({
+          build: {
+            inlineStylesheets: 'always',
+          },
+          vite: {
+            // Ensure the config is available client-side
+            define: {
+              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
+            },
+            resolve: {
+              alias: {
+                // Allow directory imports to resolve to index files
+                '@db-ux/react-core-components':
+                  '@db-ux/react-core-components/dist/index.js',
+              },
+            },
+          },
+          site: combinedConfig.site,
+          base: combinedConfig.base,
+        });
+
         // Add bundled integrations if needed
         logger.info('Adding bundled integrations...');
-        const integrations: AstroIntegration[] = [...astroConfig.integrations];
+        const integrations: AstroIntegration[] = astroConfig.integrations;
         const allIntegrations = [...astroConfig.integrations];
         const bundledIntegrations = [
           react(),
           mdx(),
           orama({
             pages: {
-              pathMatcher: new RegExp('\/.+\/'),
+              pathMatcher: new RegExp('.*'),
               language: 'english',
               contentSelectors: ['main'],
             },
@@ -79,39 +94,6 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
             );
           }
         }
-
-        // Add integrations immediately after @db-ux/astro in the config array.
-        // e.g. if a user has `integrations: [dbUxAstro(), tailwind()]`, then the order will be
-        // `[dbUxAstro(), mdx(), sitemap(), tailwind()]`.
-        // This ensures users can add integrations before/after Starlight and we respect that order.
-        const selfIndex = integrations.findIndex(
-          (i) => i.name === '@db-ux/astro'
-        );
-        integrations.splice(selfIndex + 1, 0, ...integrations);
-
-        // Finally, update the config
-        const updatedConfig: DeepPartial<AstroConfig> = {
-          build: {
-            inlineStylesheets: 'always',
-          },
-          vite: {
-            // Ensure the config is available client-side
-            define: {
-              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
-            },
-            resolve: {
-              alias: {
-                // Allow directory imports to resolve to index files
-                '@db-ux/react-core-components':
-                  '@db-ux/react-core-components/dist/index.js',
-              },
-            },
-          },
-          site: combinedConfig.site,
-          base: combinedConfig.base,
-          integrations,
-        };
-        updateConfig(updatedConfig);
       },
       'astro:config:done': ({ logger }) => {
         logger.info('\x1b[32m✓ Setup complete.\x1b[0m');

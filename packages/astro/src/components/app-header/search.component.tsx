@@ -39,21 +39,17 @@ export function Search(): ReactElement {
   const debouncedQuery = useDebounce(query, 200);
 
   useEffect(() => {
-    const run = async () => {
+    const fetchDb = async () => {
       const db = create({ schema: { _: 'string' } });
-
-      const dbResponse = await fetch(
-        `${getDbUxAstroConfig().base}assets/oramaDB_pages.json`
-      );
+      const url = `${getDbUxAstroConfig().base}assets/oramaDB_pages.json`;
+      const dbResponse = await fetch(url);
       if (dbResponse.ok) {
         const dbData = (await dbResponse.json()) as RawData;
-
         load(db, dbData);
-
         setPagesDb(db);
       }
     };
-    run();
+    fetchDb();
   }, []);
 
   useEffect(() => {

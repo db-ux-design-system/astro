@@ -1,6 +1,6 @@
 ---
-// import { appConfig } from "@root/app.config";
 import { ClientRouter } from 'astro:transitions';
+import { getDbUxAstroConfig } from '../../config';
 
 const { title } = Astro.props as {
   title: string;
@@ -11,12 +11,9 @@ const { title } = Astro.props as {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-  <!-- <base href={appConfig.basePath} /> -->
-  <!-- <link
-    rel="icon"
-    type="image/svg+xml"
-    href={`${appConfig.basePath}favicon.ico`}
-  /> -->
+  <base href={getDbUxAstroConfig().base} />
+  <link rel="sitemap" href="sitemap-index.xml" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <title>{title}</title>
   <ClientRouter />
 </head>

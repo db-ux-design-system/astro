@@ -13,17 +13,15 @@ export function filterSitemapBlacklist(
   config: CombinedConfig,
   logger: AstroIntegrationLogger
 ): boolean {
-  for (const blacklistedPage of config.sitemapBlacklist ?? []) {
-    let fullBlacklistedPage = `${config.site}${config.base}${blacklistedPage}`;
-    // Make sure that trailing slashes match
-    if (page.endsWith('/') && !fullBlacklistedPage.endsWith('/')) {
-      fullBlacklistedPage = fullBlacklistedPage + '/';
-    } else if (fullBlacklistedPage.endsWith('/') && !page.endsWith('/')) {
-      page = page + '/';
-    }
+  for (let blacklistedPage of config.sitemapBlacklist ?? []) {
+    if (blacklistedPage.startsWith('/'))
+      blacklistedPage = blacklistedPage.slice(1);
+    if (!blacklistedPage.endsWith('/')) blacklistedPage = blacklistedPage + '/';
+    const fullBlacklistedPage = `${config.site}${config.base}${blacklistedPage}`;
+
     if (fullBlacklistedPage === page) {
       logger.info(
-        `Page \x1b[36m${page}\x1b[0m is blacklisted and will not be included into the sitemap.`
+        `Page \x1b[36m${page}\x1b[0m has been blacklisted and will not be included into the sitemap.`
       );
       return false;
     }

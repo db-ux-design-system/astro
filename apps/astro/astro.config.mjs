@@ -9,7 +9,7 @@ export default defineConfig({
       appName: '@db-ux/astro',
     }),
   ],
-  site: 'https://design-system.deutschebahn.com/',
+  site: 'https://design-system.deutschebahn.com',
   base: '/astro/',
   devToolbar: {
     enabled: false,
