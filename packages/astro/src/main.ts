@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import orama from '@orama/plugin-astro';
 import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
 import { filterSitemapBlacklist } from './utils/sitemap.utils';
+import type { DeepPartial } from 'node_modules/astro/dist/type-utils';
 
 const defaultConfig: DbUxAstroConfig = {
   appName: '@db-ux/astro',
@@ -47,25 +48,6 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
           site: astroConfig.site,
         };
 
-        // Make config also available client-side through vite.define
-        updateConfig({
-          build: {
-            inlineStylesheets: 'always',
-          },
-          vite: {
-            define: {
-              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
-            },
-            resolve: {
-              alias: {
-                // Allow directory imports to resolve to index files
-                '@db-ux/react-core-components':
-                  '@db-ux/react-core-components/dist/index.js',
-              },
-            },
-          },
-        });
-
         // Add bundled integrations if needed
         logger.info('Adding bundled integrations...');
         const integrations: AstroIntegration[] = [...astroConfig.integrations];
@@ -104,12 +86,27 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
         integrations.splice(selfIndex + 1, 0, ...integrations);
 
         // Finally, update the config
-        const updatedConfig: Partial<AstroConfig> = {
+        const updatedConfig: DeepPartial<AstroConfig> = {
+          build: {
+            inlineStylesheets: 'always',
+          },
+          vite: {
+            // Ensure the config is available client-side
+            define: {
+              'import.meta.env.DB_UX_ASTRO_CONFIG': combinedConfig,
+            },
+            resolve: {
+              alias: {
+                // Allow directory imports to resolve to index files
+                '@db-ux/react-core-components':
+                  '@db-ux/react-core-components/dist/index.js',
+              },
+            },
+          },
           site: astroConfig.site,
           base: astroConfig.base,
           integrations,
         };
-        logger.info(JSON.stringify(updatedConfig, null, 2));
         updateConfig(updatedConfig);
       },
       'astro:config:done': ({ logger }) => {
