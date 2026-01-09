@@ -24,7 +24,9 @@
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "dev": "pnpm dev:astro",
-    "dev:astro": "pnpm --filter test-app-astro dev"
+    "preview": "pnpm preview:astro",
+    "dev:astro": "pnpm --filter test-app-astro dev",
+    "preview:astro": "pnpm --filter test-app-astro preview"
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "1.51.0",

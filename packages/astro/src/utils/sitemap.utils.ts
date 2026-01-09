@@ -1,13 +1,17 @@
+import type { AstroIntegrationLogger } from 'astro';
 import { type CombinedConfig } from '../config';
 
 /**
  * Filters out pages that are blacklisted from the sitemap.
  * @param page The page to check.
+ * @param config The combined configuration.
+ * @param logger The logger.
  * @returns Whether the page should be included in the sitemap.
  */
 export function filterSitemapBlacklist(
   page: string,
-  config: CombinedConfig
+  config: CombinedConfig,
+  logger: AstroIntegrationLogger
 ): boolean {
   for (const blacklistedPage of config.sitemapBlacklist ?? []) {
     let fullBlacklistedPage = `${config.site}${config.base}${blacklistedPage}`;
@@ -18,9 +22,8 @@ export function filterSitemapBlacklist(
       page = page + '/';
     }
     if (fullBlacklistedPage === page) {
-      // eslint-disable-next-line no-console
-      console.log(
-        `${page} is blacklisted and will not be included into the sitemap.`
+      logger.info(
+        `Page \x1b[36m${page}\x1b[0m is blacklisted and will not be included into the sitemap.`
       );
       return false;
     }
