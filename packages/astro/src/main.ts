@@ -73,6 +73,10 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
               `Adding integration: \x1b[36m${integration.name}\x1b[0m`
             );
             integrations.push(integration);
+          } else {
+            logger.info(
+              `Skipping integration: \x1b[36m${integration.name}\x1b[0m`
+            );
           }
         }
 
