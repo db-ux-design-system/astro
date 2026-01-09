@@ -39,7 +39,7 @@ pnpm prepare
 
 Now you may start developing, e.g. by running:
 
-```bashe
+```bash
 pnpm dev:astro
 ```
 
