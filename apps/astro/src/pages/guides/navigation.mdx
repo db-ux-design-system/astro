@@ -4,4 +4,26 @@ title: Navigation
 description: Learn about how to create navigation structures in your Astro site using @db-ux/astro.
 ---
 
+## Create a navigation structure
 
+We recommend creating a new file in your app that will hold your navigation structure. You can find an example [here](/apps/astro/src/app.navigation.ts).
+
+After doing so, you can import that navigation structure in `astro.config.mjs` and pass it to the integration config.
+
+```js
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
+import { navigation } from './src/app.navigation';
+
+export default defineConfig({
+  integrations: [
+    dbUxAstro({
+      // Other config options...
+      navigation,
+    }),
+  ],
+  // Other config options...
+});
+```
+
+The integration will then use your navigation structure to render the navigation menu in the application header.

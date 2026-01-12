@@ -1,4 +1,4 @@
-import { getDbUxAstroConfig } from 'src/config';
+import { getDbUxAstroConfig } from '../config';
 
 /**
  * Get the aria-current attribute for the given path.
