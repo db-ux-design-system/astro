@@ -7,6 +7,11 @@ import {
 import { getDbUxAstroConfig } from '../../config';
 import { getAriaCurrent } from '../../utils/client.utils';
 
+function href(path?: string): string {
+  const { base } = getDbUxAstroConfig();
+  return `${base.replace(/\/+$/, '')}/${(path ?? '').replace(/^\/+/, '')}`;
+}
+
 export function Navigation(): ReactElement | null {
   const { navigation } = getDbUxAstroConfig();
   if (!navigation || navigation.length === 0) return null;
@@ -21,7 +26,7 @@ export function Navigation(): ReactElement | null {
               ? item.children.map((child) => (
                   <DBNavigationItem key={child.title}>
                     <a
-                      href={child.path}
+                      href={href(child.path)}
                       aria-current={getAriaCurrent(child.path)}
                     >
                       {child.icon && <DBIcon icon={child.icon} />}
@@ -38,7 +43,7 @@ export function Navigation(): ReactElement | null {
               {item.title}
             </>
           ) : (
-            <a href={item.path} aria-current={getAriaCurrent(item.path)}>
+            <a href={href(item.path)} aria-current={getAriaCurrent(item.path)}>
               {item.icon && <DBIcon icon={item.icon} />}
               {item.title}
             </a>
