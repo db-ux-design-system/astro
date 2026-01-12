@@ -1,6 +1,10 @@
 :root {
   --dba-max-content-width: 1440px;
   --dba-content-padding: 16px;
+  --dba-header-height: 64px;
+  --dba-footer-height: 64px;
+  --footer-height: 80px;
+  --dba-toc-width: 300px;
 }
 
 /*
@@ -10,5 +14,6 @@ https://github.com/db-ux-design-system/core-web/blob/main/packages/foundations/s
 @media screen and (max-width: 1023px) {
   :root {
     --dba-max-content-width: 100%;
+    --dba-toc-width: 100%;
   }
 }

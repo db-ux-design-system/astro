@@ -1,0 +1,117 @@
+---
+layout: '@db-ux/astro/layouts/default'
+title: Introduction
+description: Learn about @db-ux/astro and how it enables you to build beautiful websites Astro and DB UX Design System.
+---
+
+## 🌟 Core Features
+
+`@db-ux/astro` is a library and template for building websites using [Astro](https://astro.build/) and the [DB UX Design System](https://design-system.deutschebahn.com/). It provides a set of components, layouts and utilities enabling you to build blazingly-fast, accessible and beautiful websites that follow DB UX Design System guidelines.
+
+Some of the core features include:
+
+- **Very easy installation and updating**. No forking or cloning required!
+- Implements the [**DB UX Design System v3**](https://design-system.deutschebahn.com/). You can even directly import [**DB UI React components**](#-import-db-uireact-components), allowing for elaborate designs if desired. Follow DB UX Design System guidelines out-of-the-box.
+- **Responsive by default.** Works great on both desktop and mobile devices.
+- Comes with a **default layout suitable for most common usecases** like documentation sites or landing pages.
+- **Integrated search functionality** using [Orama](https://docs.orama.com/docs/orama-js).
+- **Automatic sitemap generation** for better SEO and integration with [DB Search](https://anonyme-suche.intranet.deutschebahn.com/seb/).
+- **Automatic generation of navigation** and **table of contents** for your pages.
+- **Write content in Markdown and [MDX](https://mdxjs.com/)** for maximum flexibility and ease of use. Control how your content is rendered using Markdown Front Matter attributes.
+
+## 🚀 Getting Started
+
+To get started with `@db-ux/astro`, start by [creating a new Astro app](https://docs.astro.build/en/install-and-setup/). When prompted, we recommend using the `minimal` template for best compatibility:
+
+```bash
+npm create astro@latest
+```
+
+Next, simply install the `@db-ux/astro` package as a dependency:
+
+```bash
+npm install @db-ux/astro
+```
+
+In your `astro.config.mjs`, add the integration:
+
+```js
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
+
+export default defineConfig({
+  // Add the dbUxAstro integration
+  integrations: [
+    dbUxAstro({
+      appName: 'my-awesome-website',
+    }),
+  ],
+  // Other Astro configuration options...
+});
+```
+
+Finally, start the development server:
+
+```bash
+npm run dev
+```
+
+You should now see your website running at `http://localhost:4321/`. For any page to make use of the `@db-ux/astro` layout, you need to include the following front matter at the top of your Markdown or MDX files:
+
+```yaml
+---
+layout: '@db-ux/astro/layouts/default'
+---
+```
+
+Alternatively, if you'd like to use Astro's default `.astro` files, you can set the layout like this:
+
+```astro
+---
+import DefaultLayout from '@db-ux/astro/layouts/default';
+---
+<DefaultLayout>
+	<!-- Your page content goes here -->
+</DefaultLayout>
+```
+
+And that's it! You can now start building your website using `@db-ux/astro`. Have fun and make sure to check out the rest of our guides as well as the official [Astro documentation](https://docs.astro.build/)! 🎉
+
+### 🏗 Create your own pages
+
+We highly recommend using **[Markdown](https://duckduckgo.com/?q=markdown&ia=web)** to create pages as it's easy to learn and quick to use. This template comes with a **hidden example page** that should give a few ideas on what can be done with Markdown and this template. You can find it under `pages/example.mdx` or under `/example` on the local development server, as well as [here](https://git.tech.rz.db.de/db-inner-source/tt-web/community-projects/db-on-astro/example/). Additionally, VS Code comes with a [handy extension](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) to preview Markdown files, which we highly recommend.
+
+When creating your own Markdown page, you need to include a **front matter section** that looks like this:
+
+```
+---
+layout: '../layouts/layout.astro' # This is the relative path to the main layout.
+title: 'My awesome page' # This is your page title.
+description: 'This is an awesome web page!' # This is your page's metadata description.
+---
+[Your actual page content goes here.]
+```
+
+It is **important that you include the relative path to the main layout**. Without it, your page will not be embedded into the website's layout properly. The layout serves all styling, but also core functionality like the main navigation or automatic tables of content.
+
+> ℹ️ The template supports [a couple of front matter properties](/template/.types/global.d.ts) that you can use to control how your page is being rendered.
+
+### 🧭 Make your page available in the main navigation
+
+The template comes with a **main navigation** that allows accessing pages conveniently. However, your pages will not show up in the navigation automatically. Instead, you need to configure your navigation in `app.navigation.ts`. Find the exported `AppNavigation` array and create a new entry for your page, setting both `title` and `path`. Title will be the label of the navigation button, and path needs to match the route of your page, which matches the name of the file by default. You can also nest navigation items by using the `children` property. When nesting, a parent's `path` becomes entirely optional. We do not recommend implementing parents as their own separate pages because it can be easily overlooked by the user.
+
+### 📄 Understand frontmatter attributes
+
+Markdown documents include a header section providing document metadata known as frontmatter. Markdown frontmatter uses `yaml` syntax. Each document needs to include a frontmatter section. For a list of all required and supported frontmatter attributes see [`./template/types/global.d.ts`](./template/types/global.d.ts).
+
+```yaml
+---
+# This is the frontmatter section
+layout: "@template/layouts/default" # Required
+title: "My page" # Required
+description: "This page is awesome!" # Required
+toc: false # Disables the document's table of contents (optional)
+nav: false # Disable the document's navigation sidebar (optional)
+---
+This is the document content.
+```

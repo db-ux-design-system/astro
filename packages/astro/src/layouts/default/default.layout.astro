@@ -3,29 +3,35 @@ import { AppHeader } from '../../components/app-header';
 import { AppContent } from '../../components/app-content';
 import { HtmlRoot } from '../../components/html-root';
 import { getDbUxAstroConfig } from '../../config/config.utils';
+import type { FrontMatter } from 'src/types';
+import type { MarkdownHeading } from 'astro';
 
-const { headings, frontMatter } = Astro.props as {
-  headings: any[];
-  frontMatter: any;
-};
+const { headings = [] as MarkdownHeading[], frontmatter = {} as FrontMatter } =
+  Astro.props as {
+    headings: MarkdownHeading[];
+    frontmatter: FrontMatter;
+  };
 
 const { appName } = getDbUxAstroConfig();
-const pageTitle = frontMatter?.title
-  ? `${frontMatter.title} | ${appName}`
+const pageTitle = frontmatter.title
+  ? `${frontmatter.title} | ${appName}`
   : appName;
 ---
 
 <HtmlRoot title={pageTitle}>
-  <div class="header-container">
+  <div class="dba-header-container">
     <AppHeader client:only="react" />
   </div>
-  <AppContent>
+  <AppContent headings={headings} frontMatter={frontmatter}>
     <slot />
   </AppContent>
 </HtmlRoot>
 
 <style>
-  .header-container {
-    min-height: 74px;
+  .dba-header-container {
+    min-height: var(--dba-header-height);
+    position: fixed;
+    top: 0;
+    width: 100svw;
   }
 </style>

@@ -8,7 +8,7 @@ import { filterSitemapBlacklist } from './utils/sitemap.utils';
 
 const defaultConfig: DbUxAstroConfig = {
   appName: '@db-ux/astro',
-  sitemapBlacklist: ['/foo'],
+  sitemapBlacklist: [],
 };
 
 /**
@@ -103,3 +103,4 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
 }
 
 export * from './config/index';
+export * from './types.ts';

@@ -26,6 +26,10 @@ const { title } = Astro.props as {
   html {
     width: 100svw;
     height: 100svh;
+    overflow-x: hidden;
+    scroll-padding-top: calc(
+      var(--dba-header-height) + var(--dba-content-padding)
+    );
   }
 
   body {

@@ -1,0 +1,38 @@
+.dba-main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: var(--dba-header-height);
+  padding: var(--dba-content-padding);
+  max-width: var(--content-width);
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row-reverse;
+
+    &:has(.dba-toc) .dba-main-inner {
+      margin-right: calc(var(--dba-toc-width) + 2rem);
+    }
+  }
+}
+
+.dba-main > astro-island:empty + .dba-main-inner {
+  margin-left: 0 !important;
+}
+
+.dba-main-content {
+  flex-grow: 1;
+}
+
+.dba-article-heading {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dba-pulse-underline {
+  display: block;
+  border-radius: 0.25rem;
+  background-color: var(--db-brand-origin-default);
+  height: 0.5rem;
+  width: 4rem;
+  margin-bottom: 2rem;
+}

@@ -1,22 +1,25 @@
 ---
+import type { MarkdownHeading } from 'astro';
+import { TableOfContents } from './table-of-contents.component';
+import type { FrontMatter } from '../../types';
+import './app-content.styles.css';
 
+const { headings = [], frontMatter = {} as FrontMatter } = Astro.props as {
+  headings: MarkdownHeading[];
+  frontMatter: FrontMatter;
+};
+const toc = headings && headings?.length > 0 && frontMatter.toc !== false;
 ---
 
-<main>
-  <article>
-    <slot />
+<main class="dba-main">
+  {toc && <TableOfContents client:only astro={Astro} headings={headings} />}
+  <article class="dba-main-inner">
+    <div class="dba-main-content">
+      <h1 class="dba-article-heading">{frontMatter.title}</h1>
+      <span class="dba-pulse-underline" aria-hidden="true"></span>
+      <slot />
+    </div>
   </article>
 </main>
 
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  article {
-    max-width: var(--dba-max-content-width);
-    margin: 0 auto;
-  }
-</style>
+<style></style>

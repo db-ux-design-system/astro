@@ -1,0 +1,36 @@
+---
+layout: '@db-ux/astro/layouts/default'
+title: Default Layout
+description: Learn about the default layout provided by @db-ux/astro.
+---
+
+## Introduction
+
+## How to use
+
+Markdown (`.md`) or MDX (`.mdx`):
+
+```yaml
+---
+layout: '@db-ux/astro/layouts/default'
+---
+```
+
+Astro components (`.astro`):
+
+```astro
+---
+import DefaultLayout from '@db-ux/astro/layouts/default';
+---
+<DefaultLayout>
+	<!-- Your page content goes here -->
+</DefaultLayout>
+```
+
+## Front Matter attributes
+```yaml
+---
+title: string          # The title of the page, displayed in the browser, as the first level heading and used for SEO.
+description: string    # A brief description of the page, used for SEO.
+---
+```
