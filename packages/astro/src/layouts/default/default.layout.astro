@@ -3,14 +3,13 @@ import { AppHeader } from '../../components/app-header';
 import { AppContent } from '../../components/app-content';
 import { HtmlRoot } from '../../components/html-root';
 import { getDbUxAstroConfig } from '../../config/config.utils';
-import type { FrontMatter } from 'src/types';
-import type { MarkdownHeading } from 'astro';
+import type { DefaultLayoutProps } from './default.layout.types';
 
-const { headings = [] as MarkdownHeading[], frontmatter = {} as FrontMatter } =
-  Astro.props as {
-    headings: MarkdownHeading[];
-    frontmatter: FrontMatter;
-  };
+const { headings, frontmatter } = {
+  headings: [],
+  frontmatter: {},
+  ...(Astro.props as DefaultLayoutProps),
+};
 
 const { appName } = getDbUxAstroConfig();
 const pageTitle = frontmatter.title
@@ -22,9 +21,13 @@ const pageTitle = frontmatter.title
   <div class="dba-header-container">
     <AppHeader client:only="react" />
   </div>
-  <AppContent headings={headings} frontMatter={frontmatter}>
-    <slot />
-  </AppContent>
+  <AppContent
+    title={frontmatter.title}
+    headings={headings}
+    toc={frontmatter.toc ?? true}
+  >
+    <slot /></AppContent
+  >
 </HtmlRoot>
 
 <style>

@@ -4,6 +4,7 @@
   margin: auto;
   margin-top: var(--dba-header-height);
   padding: var(--dba-content-padding);
+  width: min(100%, var(--dba-max-content-width));
   max-width: var(--dba-max-content-width);
 
   @media screen and (min-width: 1024px) {
@@ -13,6 +14,10 @@
       margin-right: calc(var(--dba-toc-width) + 2rem);
     }
   }
+}
+
+.dba-main-inner {
+  width: 100%;
 }
 
 .dba-main > astro-island:empty + .dba-main-inner {

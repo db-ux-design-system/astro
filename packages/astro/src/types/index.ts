@@ -5,11 +5,11 @@ export interface FrontMatter {
   /**
    * The title of the page.
    */
-  title: string;
+  title?: string;
   /**
    * The author of the page.
    */
-  author: string;
+  author?: string;
   /**
    * The description of the page.
    */
@@ -22,17 +22,6 @@ export interface FrontMatter {
    * The path to the layout the page should use.
    */
   layout?: string;
-  /**
-   * Whether the page should render a table of contents.
-   * @default true
-   */
-  toc?: boolean;
-  /**
-   * Whether the page should render a navigation sidebar. Not visible on mobile devices and not visible
-   * if the page does not have any sibling pages.
-   * @default true
-   */
-  nav?: boolean;
 }
 
 /**

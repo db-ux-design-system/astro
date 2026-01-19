@@ -6,6 +6,8 @@ description: Learn about the default layout provided by @db-ux/astro.
 
 ## Introduction
 
+The default layout is a versatile and responsive layout designed to cover most common use cases (like documentation). It includes a header, footer and a main content area. It will also render a table of contents if your page contains headings. Most pages on this site use the default layout (including this one).
+
 ## How to use
 
 Markdown (`.md`) or MDX (`.mdx`):
@@ -28,9 +30,13 @@ import DefaultLayout from '@db-ux/astro/layouts/default';
 ```
 
 ## Front Matter attributes
+
+To see a concise reference of all available front matter attributes for pages using the default layout, see below:
+
 ```yaml
 ---
 title: string          # The title of the page, displayed in the browser, as the first level heading and used for SEO.
 description: string    # A brief description of the page, used for SEO.
+toc: boolean           # Whether to display a table of contents for the page. Default is true.
 ---
 ```

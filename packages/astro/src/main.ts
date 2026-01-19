@@ -103,4 +103,4 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
 }
 
 export * from './config/index';
-export * from './types.ts';
+export * from './types';

@@ -1,22 +1,30 @@
 ---
-import type { MarkdownHeading } from 'astro';
 import { TableOfContents } from './table-of-contents.component';
-import type { FrontMatter } from '../../types';
+import { type AppContentProps } from './app-content.types';
 import './app-content.styles.css';
 
-const { headings = [], frontMatter = {} as FrontMatter } = Astro.props as {
-  headings: MarkdownHeading[];
-  frontMatter: FrontMatter;
+const { headings, title, toc } = {
+  headings: [],
+  toc: true,
+  ...(Astro.props as AppContentProps),
 };
-const toc = headings && headings?.length > 0 && frontMatter.toc !== false;
+console.log(title);
+console.log(toc);
+const showToc = headings.length > 0 && toc !== false;
 ---
 
 <main class="dba-main">
-  {toc && <TableOfContents client:only astro={Astro} headings={headings} />}
+  {showToc && <TableOfContents client:only astro={Astro} headings={headings} />}
   <article class="dba-main-inner">
     <div class="dba-main-content">
-      <h1 class="dba-article-heading">{frontMatter.title}</h1>
-      <span class="dba-pulse-underline" aria-hidden="true"></span>
+      {
+        title && (
+          <>
+            <h1 class="dba-article-heading">{title}</h1>
+            <span class="dba-pulse-underline" aria-hidden="true" />
+          </>
+        )
+      }
       <slot />
     </div>
   </article>
