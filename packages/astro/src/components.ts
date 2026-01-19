@@ -4,4 +4,4 @@ export * from './components/html-head';
 export * from './components/app-header';
 export * from './components/app-content';
 export * from './components/app-footer';
-export * from './components/carousel';
+// export * from './components/carousel';

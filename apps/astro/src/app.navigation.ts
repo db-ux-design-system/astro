@@ -18,7 +18,7 @@ export const navigation: NavigationItem[] = [
     title: 'Layouts',
     children: [
       {
-        title: 'Default',
+        title: 'Default Layout',
         path: '/layouts/default',
       },
     ],
