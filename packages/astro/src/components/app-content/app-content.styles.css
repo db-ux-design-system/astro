@@ -4,7 +4,7 @@
   margin: auto;
   margin-top: var(--dba-header-height);
   padding: var(--dba-content-padding);
-  max-width: var(--content-width);
+  max-width: var(--dba-max-content-width);
 
   @media screen and (min-width: 1024px) {
     flex-direction: row-reverse;
