@@ -45,8 +45,8 @@ importers:
         specifier: 4.3.0
         version: 4.3.0
       '@db-ux/core-foundations':
-        specifier: 4.2.6
-        version: 4.2.6
+        specifier: 4.3.0
+        version: 4.3.0
       '@db-ux/react-core-components':
         specifier: 4.3.0
         version: 4.3.0
@@ -235,9 +235,6 @@ packages:
 
   '@db-ux/core-foundations@3.1.16':
     resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
-
-  '@db-ux/core-foundations@4.2.6':
-    resolution: {integrity: sha512-eSRG5bJimvB88ZO+p1N8FR9wE/LakSq/ujw/O7z8dJ7IqCm8Px/yTemIvig0t5K+YPn23L4z6OsC3TG/xnw4SA==}
 
   '@db-ux/core-foundations@4.3.0':
     resolution: {integrity: sha512-dtMTmdzppWb2dghgkKpV/ZNmSclAV1xAjBZ9ntn/XFVWGFAlP4tes6uNBVtR+joBVz7vnXWZ8BZXdaeqfmRXdA==}
@@ -3010,8 +3007,6 @@ snapshots:
       '@db-ux/core-foundations': 4.3.0
 
   '@db-ux/core-foundations@3.1.16': {}
-
-  '@db-ux/core-foundations@4.2.6': {}
 
   '@db-ux/core-foundations@4.3.0': {}
 
