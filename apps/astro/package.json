@@ -13,7 +13,7 @@
     "astro": "5.16.15",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
     "@db-ux/core-foundations": "4.3.2",
-    "@db-ux/core-components": "4.3.2",
+    "@db-ux/core-components": "4.4.0",
     "@db-ux/react-core-components": "4.3.2"
   }
 }
