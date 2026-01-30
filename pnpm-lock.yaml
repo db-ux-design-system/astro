@@ -21,8 +21,8 @@ importers:
         specifier: 9.39.2
         version: 9.39.2
       globals:
-        specifier: 17.1.0
-        version: 17.1.0
+        specifier: 17.2.0
+        version: 17.2.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -235,9 +235,6 @@ packages:
 
   '@db-ux/core-foundations@3.1.16':
     resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
-
-  '@db-ux/core-foundations@4.3.2':
-    resolution: {integrity: sha512-pDliVSoljjsMOZ299ZSeP8/xWnIiZrnMELHy4DfyeMeufaNt40aCmIvGU3wrTMGGPXH4Nt5EHsIvIfVMv43uyw==}
 
   '@db-ux/core-foundations@4.4.0':
     resolution: {integrity: sha512-jCgwZYbW2M3Fxn3uuRo+oQaKI0Qu+m9VKPLOtdJGIKhR+wGRgyap3guT8a+8eqb0er9LdKqxEBLGNiUswWMnyw==}
@@ -1517,8 +1514,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.1.0:
-    resolution: {integrity: sha512-8HoIcWI5fCvG5NADj4bDav+er9B9JMj2vyL2pI8D0eismKyUvPLTSs+Ln3wqhwcp306i73iyVnEKx3F6T47TGw==}
+  globals@17.2.0:
+    resolution: {integrity: sha512-tovnCz/fEq+Ripoq+p/gN1u7l6A7wwkoBT9pRCzTHzsD/LvADIzXZdjmRymh5Ztf0DYC3Rwg5cZRYjxzBmzbWg==}
     engines: {node: '>=18'}
 
   h3@1.15.5:
@@ -3014,8 +3011,6 @@ snapshots:
 
   '@db-ux/core-foundations@3.1.16': {}
 
-  '@db-ux/core-foundations@4.3.2': {}
-
   '@db-ux/core-foundations@4.4.0': {}
 
   '@db-ux/react-core-components@4.4.0':
@@ -4346,7 +4341,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.1.0: {}
+  globals@17.2.0: {}
 
   h3@1.15.5:
     dependencies:
