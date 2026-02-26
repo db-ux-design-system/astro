@@ -30,11 +30,11 @@
     "husky": "9.1.7",
     "changesets": "1.0.2",
     "@eslint/js": "10.0.1",
-    "eslint": "10.0.1",
+    "eslint": "10.0.2",
     "globals": "17.3.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
-    "typescript-eslint": "8.56.0"
+    "typescript-eslint": "8.56.1"
   },
   "packageManager": "pnpm@10.14.0"
 }
