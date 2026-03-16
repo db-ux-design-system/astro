@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@dotenvx/dotenvx':
-        specifier: 1.54.1
-        version: 1.54.1
+        specifier: 1.55.0
+        version: 1.55.0
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.0.3)
@@ -255,8 +255,8 @@ packages:
   '@db-ux/react-core-components@4.5.3':
     resolution: {integrity: sha512-To4sK/U84bIRmk1IB+fmw7pMktHbpjpnvYJvdA8/420cxdtHD3GkKH9HuUivxh5ys1+ZZ0baC9h5Hge8zgll1w==}
 
-  '@dotenvx/dotenvx@1.54.1':
-    resolution: {integrity: sha512-41gU3q7v05GM92QPuPUf4CmUw+mmF8p4wLUh6MCRlxpCkJ9ByLcY9jUf6MwrMNmiKyG/rIckNxj9SCfmNCmCqw==}
+  '@dotenvx/dotenvx@1.55.0':
+    resolution: {integrity: sha512-JOHoUw2dyHPSoVJwfH5yf3j8yIBtqYDhpcaFv9QKrS30KPme025yA+uJ9q9FTphnr6QkEOMUk/B7I3nmwHkamg==}
     hasBin: true
 
   '@ecies/ciphers@0.2.5':
@@ -3361,7 +3361,7 @@ snapshots:
       '@db-ux/core-components': 4.5.3
       '@db-ux/core-foundations': 4.5.3
 
-  '@dotenvx/dotenvx@1.54.1':
+  '@dotenvx/dotenvx@1.55.0':
     dependencies:
       commander: 11.1.0
       dotenv: 17.3.1
