@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
-    "astro": "5.18.0",
+    "astro": "6.0.8",
     "typescript": "6.0.2"
   },
   "packageManager": "pnpm@10.14.0"
