@@ -12,7 +12,7 @@
   "dependencies": {
     "astro": "5.18.0",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
-    "@db-ux/core-foundations": "4.5.4",
+    "@db-ux/core-foundations": "4.6.0",
     "@db-ux/core-components": "4.6.0",
     "@db-ux/react-core-components": "4.5.4"
   }
