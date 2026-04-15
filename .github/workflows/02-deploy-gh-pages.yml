@@ -15,13 +15,13 @@ jobs:
       contents: write
     steps:
       - name: ⏬ Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: 🔄 Init PNPM
         uses: ./.github/actions/pnpm-init
 
       - name: ⏬ Download patternhub
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: astro-app
           path: apps/astro/dist
