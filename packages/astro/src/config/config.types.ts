@@ -46,8 +46,11 @@ export interface DbUxAstroConfig {
 
 /**
  * An intersection of `DbUxAstroConfig` as well as selected Astro config options.
+ * Optional fields that have default values are narrowed to required here.
  */
 export interface CombinedConfig extends DbUxAstroConfig {
+  appName: string;
+  sitemapBlacklist: string[];
   base: string;
   site?: string;
 }

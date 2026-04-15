@@ -7,7 +7,7 @@ export interface ILocalStorage {
 export class LocalStorage extends LocalStorageMixin<ILocalStorage>({
   key: getDbUxAstroConfig().appName.toLocaleLowerCase().replaceAll(' ', '-'),
   defaultValues: {
-    theme: () => {
+    theme: (() => {
       try {
         return window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -17,6 +17,6 @@ export class LocalStorage extends LocalStorageMixin<ILocalStorage>({
       } catch (error) {
         return 'light';
       }
-    },
+    })(),
   },
 }) {}

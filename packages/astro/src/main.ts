@@ -5,11 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import orama from '@orama/plugin-astro';
 import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
 import { filterSitemapBlacklist } from './utils/sitemap.utils';
-
-const defaultConfig: DbUxAstroConfig = {
-  appName: '@db-ux/astro',
-  sitemapBlacklist: [],
-};
+import { defaultConfig } from './config/config.default';
 
 /**
  * The `@db-ux/astro` integration for Astro projects.
