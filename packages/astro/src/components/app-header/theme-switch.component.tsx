@@ -10,6 +10,7 @@ export function ThemeSwitch(): ReactElement {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-mode', colorScheme);
+    document.documentElement.style.colorScheme = colorScheme;
     document.body.setAttribute('data-mode', colorScheme);
 
     LocalStorage.set('theme', colorScheme);
