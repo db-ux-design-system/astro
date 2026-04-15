@@ -1,0 +1,38 @@
+{
+  "name": "@db-ux/create-astro",
+  "version": "0.0.1",
+  "description": "CLI installer for @db-ux/astro package with automatic peer dependency installation",
+  "type": "module",
+  "bin": {
+    "@db-ux/create-astro": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "vitest --silent",
+    "test:watch": "vitest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/db-ux-design-system/astro.git"
+  },
+  "author": "DB Systel GmbH",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dep1": "^1.0.0",
+    "dep2": "^2.0.0",
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.9",
+    "@vitest/coverage-v8": "4.0.17",
+    "typescript": "5.7.3",
+    "vite": "7.3.1",
+    "vitest": "4.0.17"
+  }
+}

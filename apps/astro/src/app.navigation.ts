@@ -9,6 +9,10 @@ export const navigation: NavigationItem[] = [
         path: '/guides/getting-started',
       },
       {
+        title: 'Configuration',
+        path: '/guides/configuration',
+      },
+      {
         title: 'Navigation',
         path: '/guides/navigation',
       },

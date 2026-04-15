@@ -49,3 +49,11 @@ pnpm dev:astro
 - `pnpm lint` - Lint entire project
 - `pnpm format` - Format entire project
 - `pnpm test` - Execute all tests
+
+## TODO
+
+- support for custom html & css
+- automated navigation
+- subnav/sidebar nav support
+- landing page layout
+- install script peer deps

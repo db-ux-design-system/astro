@@ -56,7 +56,19 @@ Finally, start the development server:
 npm run dev
 ```
 
-You should now see your website running at `http://localhost:4321/`. For any page to make use of the `@db-ux/astro` layout, you need to include the following front matter at the top of your Markdown or MDX files:
+You should now see your website running at `http://localhost:4321/`. And that's it! You can now start building your website using `@db-ux/astro`. Have fun and make sure to check out the rest of our guides as well as the official [Astro documentation](https://docs.astro.build/)! 🎉
+
+## 🏗 Create your own pages
+
+We highly recommend using **[Markdown](https://duckduckgo.com/?q=markdown&ia=web)** to create pages as it's easy to learn and quick to use.
+
+To create a new Markdown page, simply create a new file with the `.md` extension in the `src/pages` directory. Astro uses a file-based routing system, meaning that directory and file names will directly be used to build the URL structure of your website. For example, creating a file at `src/pages/my-awesome-page.md` will make it available at `http://localhost:4321/my-awesome-page`. You can read more about Astro's file-based routing in the [official documentation](https://docs.astro.build/en/guides/routing/).
+
+## 🌄 Apply styling and DB UX Design System
+
+Astro features [layouts](https://docs.astro.build/en/basics/layouts/) that allow apps to share common UI structure and styling across multiple pages. `@db-ux/astro` comes with built-in layouts that already include all necessary styling and structure to get you started quickly. These also implement the DB UX Design System guidelines out-of-the-box.
+
+For any page to make use of the one of our built-in layouts (e.g. the [default layout](layouts/default)), you need to include the following front matter at the top of your Markdown or MDX files:
 
 ```yaml
 ---
@@ -71,47 +83,63 @@ Alternatively, if you'd like to use Astro's default `.astro` files, you can set 
 import DefaultLayout from '@db-ux/astro/layouts/default';
 ---
 <DefaultLayout>
-	<!-- Your page content goes here -->
+  <!-- Your page content goes here -->
 </DefaultLayout>
 ```
 
-And that's it! You can now start building your website using `@db-ux/astro`. Have fun and make sure to check out the rest of our guides as well as the official [Astro documentation](https://docs.astro.build/)! 🎉
+## 🧭 Make your page available in the main navigation
 
-### 🏗 Create your own pages
+`@db-ux/astro` comes with a built-in navigation menu that is included in most layouts. This navigation allows users to easily browse through the different pages of your website. As of now, this navigation is **not** generated automatically. Instead, you need to manually configure which pages should appear in the navigation.
 
-We highly recommend using **[Markdown](https://duckduckgo.com/?q=markdown&ia=web)** to create pages as it's easy to learn and quick to use. This template comes with a **hidden example page** that should give a few ideas on what can be done with Markdown and this template. You can find it under `pages/example.mdx` or under `/example` on the local development server, as well as [here](https://git.tech.rz.db.de/db-inner-source/tt-web/community-projects/db-on-astro/example/). Additionally, VS Code comes with a [handy extension](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) to preview Markdown files, which we highly recommend.
+To do that, we recommend creating a file `app.navigation.ts` in the `src` directory of your Astro project. In this file, you can define the structure of your navigation menu by exporting an array of navigation items. For example:
 
-When creating your own Markdown page, you need to include a **front matter section** that looks like this:
-
+```js
+// src/app.navigation.ts
+export const navigation: NavigationItem[] = [
+  {
+    title: 'Guides',
+    children: [
+      {
+        title: 'Getting Started',
+        path: '/guides/getting-started',
+      },
+      {
+        title: 'Navigation',
+        path: '/guides/navigation',
+      },
+    ],
+  },
+  {
+    title: 'Layouts',
+    children: [
+      {
+        title: 'Default Layout',
+        path: '/layouts/default',
+      },
+    ],
+  }
+];
 ```
----
-layout: '../layouts/layout.astro' # This is the relative path to the main layout.
-title: 'My awesome page' # This is your page title.
-description: 'This is an awesome web page!' # This is your page's metadata description.
----
-[Your actual page content goes here.]
+
+You can then import this navigation structure in your `astro.config.mjs` and pass it to the integration config:
+
+```js
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
+import { navigation } from './src/app.navigation';
+
+export default defineConfig({
+  integrations: [
+    dbUxAstro({
+      // Other config options...
+      navigation,
+    }),
+  ],
+  // Other config options...
+});
 ```
 
-It is **important that you include the relative path to the main layout**. Without it, your page will not be embedded into the website's layout properly. The layout serves all styling, but also core functionality like the main navigation or automatic tables of content.
+Navigation is further explained in the [Navigation Guide](guides/navigation).
 
-> ℹ️ The template supports [a couple of front matter properties](/template/.types/global.d.ts) that you can use to control how your page is being rendered.
-
-### 🧭 Make your page available in the main navigation
-
-The template comes with a **main navigation** that allows accessing pages conveniently. However, your pages will not show up in the navigation automatically. Instead, you need to configure your navigation in `app.navigation.ts`. Find the exported `AppNavigation` array and create a new entry for your page, setting both `title` and `path`. Title will be the label of the navigation button, and path needs to match the route of your page, which matches the name of the file by default. You can also nest navigation items by using the `children` property. When nesting, a parent's `path` becomes entirely optional. We do not recommend implementing parents as their own separate pages because it can be easily overlooked by the user.
-
-### 📄 Understand frontmatter attributes
-
-Markdown documents include a header section providing document metadata known as frontmatter. Markdown frontmatter uses `yaml` syntax. Each document needs to include a frontmatter section. For a list of all required and supported frontmatter attributes see [`./template/types/global.d.ts`](./template/types/global.d.ts).
-
-```yaml
----
-# This is the frontmatter section
-layout: "@template/layouts/default" # Required
-title: "My page" # Required
-description: "This page is awesome!" # Required
-toc: false # Disables the document's table of contents (optional)
-nav: false # Disable the document's navigation sidebar (optional)
----
-This is the document content.
-```
+And that's all you need to get started with `@db-ux/astro`! From here, you can explore more advanced features and customization options in the guides as well as in the layout and component references. Happy building! 🚀

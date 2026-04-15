@@ -6,11 +6,42 @@ description: Learn about how to create navigation structures in your Astro site 
 
 ## Create a navigation structure
 
-We recommend creating a new file in your app that will hold your navigation structure. You can find an example [here](/apps/astro/src/app.navigation.ts).
+`@db-ux/astro` comes with a built-in navigation menu that is included in most layouts. This navigation allows users to easily browse through the different pages of your website. As of now, this navigation is **not** generated automatically. Instead, you need to manually configure which pages should appear in the navigation.
+
+We recommend creating a new file in your app that will hold your navigation structure. You can find an example [here](/apps/astro/src/app.navigation.ts). The file name or location is not important, but we recommend placing it in the `src` directory of your Astro project for easy access.
+
+```js
+// src/app.navigation.ts
+export const navigation: NavigationItem[] = [
+  {
+    title: 'Guides',
+    children: [
+      {
+        title: 'Getting Started',
+        path: '/guides/getting-started',
+      },
+      {
+        title: 'Navigation',
+        path: '/guides/navigation',
+      },
+    ],
+  },
+  {
+    title: 'Layouts',
+    children: [
+      {
+        title: 'Default Layout',
+        path: '/layouts/default',
+      },
+    ],
+  }
+];
+```
 
 After doing so, you can import that navigation structure in `astro.config.mjs` and pass it to the integration config.
 
 ```js
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import { dbUxAstro } from '@db-ux/astro';
 import { navigation } from './src/app.navigation';
