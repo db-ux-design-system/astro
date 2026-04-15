@@ -4,11 +4,18 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/db-ux-design-system/astro)
 ![GitHub License](https://img.shields.io/github/license/db-ux-design-system/astro)
 
+## Overview
+
 This is a monorepo containing various packages relating to [🚀 Astro](https://astro.build/). Astro is a web framework optimized for building fast, content-driven websites. It is an excellent match with the core `@db-ux` packages since its framework-agnostic and makes it very easy to build static or hybrid websites.
 
 The monorepo contains the following packages:
 
 - `@db-ux/astro` - An astro integration that is the core component of this repository. It makes it incredibly easy to bootstrap astro projects that make full use of our `@db-ux/core-*` packages.
+- `@db-ux/create-astro` - An installation script that helps you setup your astro project quickly.
+
+## Documentation
+
+Please visit our [Documentation](https://design-system.deutschebahn.com/astro/) for more information.
 
 ## Contribution
 
@@ -40,11 +47,12 @@ pnpm prepare
 Now you may start developing, e.g. by running:
 
 ```bash
-pnpm dev:astro
+pnpm dev
 ```
 
 ### Useful Commands
 
+- `pnpm dev` - Start the development server.
 - `pnpm check` - Perform all code checks (like linting, format and type checks)
 - `pnpm lint` - Lint entire project
 - `pnpm format` - Format entire project
@@ -56,4 +64,3 @@ pnpm dev:astro
 - automated navigation
 - subnav/sidebar nav support
 - landing page layout
-- install script peer deps

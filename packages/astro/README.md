@@ -33,7 +33,4 @@ export default defineConfig({
 });
 ```
 
-ℹ️ **Note:** `@db-ux/astro` bundles the following integrations (and their dependencies), so you do not need to install or configure them yourself:
-
-- [`@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
-- [`@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
+For more information, please visit our [Documentation](https://design-system.deutschebahn.com/astro/).

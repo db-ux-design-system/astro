@@ -46,4 +46,10 @@ export interface NavigationItem {
    * items if a path is not provided.
    */
   children?: NavigationItem[];
+  /**
+   * By default, sub-items are rendered in a dropdown menu. Setting this to `true` will render
+   * sub-items in a side panel instead.
+   * @see {@link https://design-system.deutschebahn.com/core-web/version/v4.6.1/components/navigation/navigation/how-to-use}
+   */
+  useSubNavigation?: boolean;
 }
