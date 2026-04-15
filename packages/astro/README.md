@@ -8,10 +8,11 @@ npm create astro@latest
 
 We recommend choosing `Use minimal (empty) template` during the installation questionnaire. This will allow you to use `@db-ux/astro` as we intended.
 
-Next, install `@db-ux/astro` and its requirements.
+Next, install `@db-ux/astro` and its requirements. The easiest way to do that is using our installation script.
 
 ```bash
-npm i @db-ux/astro @db-ux/core-foundations @db-ux/core-components @db-ux/react-components @astrojs/mdx @astrojs/react react
+npm i
+npm create @db-ux/astro
 ```
 
 Finally, navigate to to your `astro.config.mjs` file and add the `dbUxAstro` integration to your configuration.
@@ -31,8 +32,3 @@ export default defineConfig({
   ],
 });
 ```
-
-ℹ️ **Note:** `@db-ux/astro` bundles the following integrations (and their dependencies), so you do not need to install them yourself:
-
-- [`@astrojs/react`](https://docs.astro.build/en/guides/integrations-guide/react/)
-- [`@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
