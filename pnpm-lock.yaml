@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@dotenvx/dotenvx':
-        specifier: 1.61.1
-        version: 1.61.1
+        specifier: 1.61.2
+        version: 1.61.2
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.2.1)
@@ -42,14 +42,14 @@ importers:
         specifier: workspace:@db-ux/astro@*
         version: link:../../packages/astro
       '@db-ux/core-components':
-        specifier: 4.6.0
-        version: 4.6.0
+        specifier: 4.6.1
+        version: 4.6.1
       '@db-ux/core-foundations':
-        specifier: 4.6.0
-        version: 4.6.0
+        specifier: 4.6.1
+        version: 4.6.1
       '@db-ux/react-core-components':
-        specifier: 4.6.0
-        version: 4.6.0
+        specifier: 4.6.1
+        version: 4.6.1
       astro:
         specifier: 5.18.0
         version: 5.18.0(@types/node@25.0.3)(rollup@4.60.1)(typescript@6.0.3)(yaml@2.8.2)
@@ -248,20 +248,20 @@ packages:
   '@db-ux/core-components@3.1.16':
     resolution: {integrity: sha512-NTP0ywEQpeT6k1DgVc/IbQRk2LUJoTyazuv4L2kgNg8JZEcRGEtBry6OhTpqp15SlBQYeJ5XL3rjbuPnwJ0/CA==}
 
-  '@db-ux/core-components@4.6.0':
-    resolution: {integrity: sha512-SsYNckdkCOJMylWGd/RlsxAJFxhoL7MxNFlPTaVXPORfG5VVZyihfCF5ZleeudlJfqxeHL9K3v8bhOcIEfunzg==}
+  '@db-ux/core-components@4.6.1':
+    resolution: {integrity: sha512-Be6JhKJnxuJyWUwuKq4IdSIJ0ngQz/QeRJBm4F1ECApeUyqp+AGgdsGnyx5FyHi5wow6kBITKYWh48NrhKpjSw==}
 
   '@db-ux/core-foundations@3.1.16':
     resolution: {integrity: sha512-xZlTt/2LWKFNprkELkYSpIGOwiJz1iGm3w35oPd7gvnNhhErP7D5UjRE5MfqJCkMk1u/umZ5yMdAc1JTAF8ZRA==}
 
-  '@db-ux/core-foundations@4.6.0':
-    resolution: {integrity: sha512-fvy0yVJ7wUY1sv5Fvi4g45PfpO034y5cQu5C2LmRYBEGamcke0Qhfgt0DeVfn+TpvQ0FDu1h0a3TUVSMGWpPVw==}
+  '@db-ux/core-foundations@4.6.1':
+    resolution: {integrity: sha512-d6a2RaWUpz1/7dCRoNj0OFAJKwm0fnGI6niUbEZRn0P5MiAjKy6noXzhsBXEE0n/ls3zxFIuqmMNNM+nZQ3/AQ==}
 
-  '@db-ux/react-core-components@4.6.0':
-    resolution: {integrity: sha512-j7qqjbty47d2KaC3VF4pFa6TXhfQ85a7rlPekgc+MO+lTTH7JsW4PutNLwzx7bp+mSrQviFgyW88x5or/eIZlQ==}
+  '@db-ux/react-core-components@4.6.1':
+    resolution: {integrity: sha512-Hrqcr8j0u+TX0NRAupxvskoS3iY8VUH4EgpiseFYiskjjIx0bA5A9RczpxURHDrD3HzlHyjuuoyi0yUuWKQwiQ==}
 
-  '@dotenvx/dotenvx@1.61.1':
-    resolution: {integrity: sha512-2OUX4KDKvQA6oa7oESG8eNcV4K/2C5jgrbxUcT0VoH9Zelg6dT+rDYew4w2GmXRV3db0tUaM4QZG3MyJL3fU5Q==}
+  '@dotenvx/dotenvx@1.61.2':
+    resolution: {integrity: sha512-MgqO42rQW1AQds4PWL87XwkESIY1BW2BcpVM8Vq69EAN/KL24KmBBo2v+ED4bje+cMiruQD20lC3x6nX/4ZtBg==}
     hasBin: true
 
   '@ecies/ciphers@0.2.6':
@@ -3512,20 +3512,20 @@ snapshots:
     dependencies:
       '@db-ux/core-foundations': 3.1.16
 
-  '@db-ux/core-components@4.6.0':
+  '@db-ux/core-components@4.6.1':
     dependencies:
-      '@db-ux/core-foundations': 4.6.0
+      '@db-ux/core-foundations': 4.6.1
 
   '@db-ux/core-foundations@3.1.16': {}
 
-  '@db-ux/core-foundations@4.6.0': {}
+  '@db-ux/core-foundations@4.6.1': {}
 
-  '@db-ux/react-core-components@4.6.0':
+  '@db-ux/react-core-components@4.6.1':
     dependencies:
-      '@db-ux/core-components': 4.6.0
-      '@db-ux/core-foundations': 4.6.0
+      '@db-ux/core-components': 4.6.1
+      '@db-ux/core-foundations': 4.6.1
 
-  '@dotenvx/dotenvx@1.61.1':
+  '@dotenvx/dotenvx@1.61.2':
     dependencies:
       commander: 11.1.0
       dotenv: 17.4.2
