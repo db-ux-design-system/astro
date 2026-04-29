@@ -39,6 +39,7 @@ async function main() {
         '   This package is designed for Astro projects. Please run this command in an Astro project root.\n'
       )
     );
+    cancel();
   }
 
   // Detect package manager

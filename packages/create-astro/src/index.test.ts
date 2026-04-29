@@ -99,7 +99,7 @@ describe('main', () => {
       return JSON.stringify({
         name: 'test-package',
         version: '1.0.0',
-        dependencies: {},
+        dependencies: { astro: '^1.0.0' },
       });
     });
     await runScript();
