@@ -64,3 +64,4 @@ pnpm dev
 - automated navigation
 - subnav/sidebar nav support
 - landing page layout
+- `@orama/plugin-astro` is not yet compatible with Astro v6 (the `astro:build:done` hook no longer exposes `routes`). A pnpm patch is applied as a temporary workaround. Once [oramasearch/orama#1020](https://github.com/oramasearch/orama/pull/1020) is merged and released, upgrade `@orama/plugin-astro` and remove the patch from `patches/` and `pnpm-workspace.yaml`.
