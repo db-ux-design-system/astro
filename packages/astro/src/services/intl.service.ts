@@ -2,7 +2,7 @@ import { Intl } from '@spuxx/js-utils';
 import { de, en } from '../dictionaries';
 
 export class BuiltinIntl extends Intl {
-  private static _builtinInstance: BuiltinIntl | null;
+  private static _builtinInstance: BuiltinIntl | null = null;
 
   public static get instance(): BuiltinIntl {
     if (!BuiltinIntl._builtinInstance) {
