@@ -2,5 +2,3 @@ packages:
   - packages/*
   - apps/*
 
-patchedDependencies:
-  '@orama/plugin-astro@3.1.18': patches/@orama__plugin-astro@3.1.18.patch
