@@ -1,7 +1,7 @@
 import { DBSwitch } from '@db-ux/react-core-components';
-import { LocalStorage } from '../../services/local-storage.service.ts';
+import { LocalStorage } from '../../services/local-storage.service';
 import { useEffect, useState, type ReactElement } from 'react';
-import { BuiltinIntl } from '../../services/intl.service.ts';
+import { BuiltinIntl } from '../../services/intl.service';
 
 export function ThemeSwitch(): ReactElement {
   const [colorScheme, setColorScheme] = useState<'light' | 'dark'>(
