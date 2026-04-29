@@ -110,8 +110,8 @@ importers:
         specifier: 3.3.0
         version: 3.3.0
       '@db-ux/react-core-components':
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 4.6.1
+        version: 4.6.1
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
@@ -349,9 +349,6 @@ packages:
 
   '@db-ux/db-theme-icons@3.3.0':
     resolution: {integrity: sha512-EqDwzq8TfaATCE2pgF82UH+XzCpUP2twhT+2glJn08N4nljN5dE42XiIjCR+apZgMylmY82lYNCNu5NttMKYZw==}
-
-  '@db-ux/react-core-components@4.0.2':
-    resolution: {integrity: sha512-8QUtw05YYnANJEu/jqt3RVI4yoFpwSTyNErm4TywFGfJCAnbrICvrObneN2uUtlk9Djz3J9ap7GCUUCnYtWZyw==}
 
   '@db-ux/react-core-components@4.6.1':
     resolution: {integrity: sha512-Hrqcr8j0u+TX0NRAupxvskoS3iY8VUH4EgpiseFYiskjjIx0bA5A9RczpxURHDrD3HzlHyjuuoyi0yUuWKQwiQ==}
@@ -3963,11 +3960,6 @@ snapshots:
   '@db-ux/core-foundations@4.6.1': {}
 
   '@db-ux/db-theme-icons@3.3.0': {}
-
-  '@db-ux/react-core-components@4.0.2':
-    dependencies:
-      '@db-ux/core-components': 4.0.2
-      '@db-ux/core-foundations': 4.0.2
 
   '@db-ux/react-core-components@4.6.1':
     dependencies:
