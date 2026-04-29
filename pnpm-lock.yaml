@@ -85,11 +85,11 @@ importers:
         specifier: 3.6.0
         version: 3.6.0
       '@orama/orama':
-        specifier: 3.1.16
-        version: 3.1.16
+        specifier: 3.1.18
+        version: 3.1.18
       '@orama/plugin-astro':
-        specifier: 3.1.16
-        version: 3.1.16(astro@5.18.0(@types/node@25.0.9)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.2))
+        specifier: 3.1.18
+        version: 3.1.18(astro@5.18.0(@types/node@25.0.9)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.2))
       '@spuxx/browser-utils':
         specifier: 1.14.0
         version: 1.14.0
@@ -1094,12 +1094,12 @@ packages:
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@orama/orama@3.1.16':
-    resolution: {integrity: sha512-scSmQBD8eANlMUOglxHrN1JdSW8tDghsPuS83otqealBiIeMukCQMOf/wc0JJjDXomqwNdEQFLXLGHrU6PGxuA==}
+  '@orama/orama@3.1.18':
+    resolution: {integrity: sha512-a61ljmRVVyG5MC/698C8/FfFDw5a8LOIvyOLW5fztgUXqUpc1jOfQzOitSCbge657OgXXThmY3Tk8fpiDb4UcA==}
     engines: {node: '>= 20.0.0'}
 
-  '@orama/plugin-astro@3.1.16':
-    resolution: {integrity: sha512-LSVa+UNQDF9r6VnGK5MtcfiryWvqSalzLaGme88ezYcihojpyz/MBllOVBvmdNsCYeBZhMbwRRLzVDbvN9tqoQ==}
+  '@orama/plugin-astro@3.1.18':
+    resolution: {integrity: sha512-6JZAkwMwEPIFE39EfbNS86w8hH6aVCV+EtwBJblBfR0xCkG9EjcMBRNSm2swYcTxaQCG2NydAEIF6yD/3hjp2w==}
     engines: {node: '>= 20.0.0'}
     peerDependencies:
       astro: ^2.0.4
@@ -4529,11 +4529,11 @@ snapshots:
 
   '@noble/hashes@1.8.0': {}
 
-  '@orama/orama@3.1.16': {}
+  '@orama/orama@3.1.18': {}
 
-  '@orama/plugin-astro@3.1.16(astro@5.18.0(@types/node@25.0.9)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.2))':
+  '@orama/plugin-astro@3.1.18(astro@5.18.0(@types/node@25.0.9)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.2))':
     dependencies:
-      '@orama/orama': 3.1.16
+      '@orama/orama': 3.1.18
       astro: 5.18.0(@types/node@25.0.9)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.2)
       html-to-text: 9.0.5
 
