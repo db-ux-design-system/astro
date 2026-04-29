@@ -1,5 +1,5 @@
 export const REQUIRED_DEPENDENCIES = [
-  // '@db-ux/astro',
+  '@db-ux/astro',
   'react',
   'react-dom',
   '@astrojs/react',
