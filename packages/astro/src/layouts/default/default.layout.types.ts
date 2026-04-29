@@ -1,5 +1,5 @@
 import type { MarkdownHeading } from 'astro';
-import type { FrontMatter } from 'src/types';
+import type { FrontMatter } from '../../types';
 
 /**
  * Front matter properties specific to the default layout.
