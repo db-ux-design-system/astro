@@ -101,8 +101,8 @@ importers:
         specifier: 5.0.4
         version: 5.0.4(@types/node@25.0.9)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(yaml@2.8.2)
       '@db-ux/core-components':
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 4.6.1
+        version: 4.6.1
       '@db-ux/core-foundations':
         specifier: 4.0.2
         version: 4.0.2
