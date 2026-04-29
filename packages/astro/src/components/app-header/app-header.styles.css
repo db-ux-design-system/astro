@@ -1,0 +1,18 @@
+.dba-header {
+  height: var(--dba-header-height);
+  display: flex;
+  flex-direction: row;
+  z-index: 51;
+
+  .db-brand {
+    text-decoration: none;
+  }
+
+  .firefly-theme-switch {
+    align-items: center;
+  }
+
+  .db-navigation-item .db-icon {
+    margin-right: 0.5rem;
+  }
+}

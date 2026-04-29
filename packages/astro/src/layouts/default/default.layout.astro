@@ -1,21 +1,40 @@
 ---
+import { AppHeader } from '../../components/app-header';
 import { AppContent } from '../../components/app-content';
 import { HtmlRoot } from '../../components/html-root';
-import { getDbUxAstroConfig } from '../../main.ts';
+import { getDbUxAstroConfig } from '../../config/config.utils';
+import type { DefaultLayoutProps } from './default.layout.types';
 
-const { headings, frontMatter } = Astro.props as {
-  headings: any[];
-  frontMatter: any;
+const { headings, frontmatter } = {
+  headings: [],
+  frontmatter: {},
+  ...(Astro.props as DefaultLayoutProps),
 };
 
 const { appName } = getDbUxAstroConfig();
-const pageTitle = frontMatter?.title
-  ? `${frontMatter.title} | ${appName}`
+const pageTitle = frontmatter.title
+  ? `${frontmatter.title} | ${appName}`
   : appName;
 ---
 
 <HtmlRoot title={pageTitle}>
-  <AppContent>
-    <slot />
-  </AppContent>
+  <div class="dba-header-container">
+    <AppHeader client:only="react" />
+  </div>
+  <AppContent
+    title={frontmatter.title}
+    headings={headings}
+    toc={frontmatter.toc ?? true}
+  >
+    <slot /></AppContent
+  >
 </HtmlRoot>
+
+<style>
+  .dba-header-container {
+    min-height: var(--dba-header-height);
+    position: fixed;
+    top: 0;
+    width: 100svw;
+  }
+</style>

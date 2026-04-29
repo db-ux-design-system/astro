@@ -23,7 +23,10 @@
     "format": "prettier --write .",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "dev:astro": "pnpm --filter test-app-astro dev"
+    "dev": "pnpm dev:astro",
+    "preview": "pnpm preview:astro",
+    "dev:astro": "pnpm --filter test-app-astro dev",
+    "preview:astro": "pnpm --filter test-app-astro preview"
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "1.63.0",

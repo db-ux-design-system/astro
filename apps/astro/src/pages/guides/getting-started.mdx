@@ -1,0 +1,146 @@
+---
+layout: '@db-ux/astro/layouts/default'
+title: Getting Started
+description: Learn about @db-ux/astro and how it enables you to build beautiful websites Astro and DB UX Design System.
+---
+
+## 🌟 Core Features
+
+`@db-ux/astro` is a library and template for building websites using [Astro](https://astro.build/) and the [DB UX Design System](https://design-system.deutschebahn.com/). It provides a set of components, layouts and utilities enabling you to build blazingly-fast, accessible and beautiful websites that follow DB UX Design System guidelines.
+
+Some of the core features include:
+
+- **Very easy installation and updating**. No forking or cloning required!
+- Implements the [**DB UX Design System v3**](https://design-system.deutschebahn.com/). You can even directly import [**DB UI React components**](#-import-db-uireact-components), allowing for elaborate designs if desired. Follow DB UX Design System guidelines out-of-the-box.
+- **Responsive by default.** Works great on both desktop and mobile devices.
+- Comes with a **default layout suitable for most common usecases** like documentation sites or landing pages.
+- **Integrated search functionality** using [Orama](https://docs.orama.com/docs/orama-js).
+- **Automatic sitemap generation** for better SEO and integration with [DB Search](https://anonyme-suche.intranet.deutschebahn.com/seb/).
+- **Automatic generation of navigation** and **table of contents** for your pages.
+- **Write content in Markdown and [MDX](https://mdxjs.com/)** for maximum flexibility and ease of use. Control how your content is rendered using Markdown Front Matter attributes.
+
+## 🚀 Getting Started
+
+To get started with `@db-ux/astro`, start by [creating a new Astro app](https://docs.astro.build/en/install-and-setup/). When prompted, we recommend using the `minimal` template for best compatibility:
+
+```bash
+npm create astro@latest
+```
+
+Next, simply navigate into your project directory and use our CLI installer to add `@db-ux/astro` to your project. This will automatically install all required peer dependencies as well:
+
+```bash
+npm create @db-ux/astro
+```
+
+In your `astro.config.mjs`, add the integration:
+
+```js
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
+
+export default defineConfig({
+  // Add the dbUxAstro integration
+  integrations: [
+    dbUxAstro({
+      appName: 'my-awesome-website',
+    }),
+  ],
+  // Other Astro configuration options...
+});
+```
+
+Finally, start the development server:
+
+```bash
+npm run dev
+```
+
+You should now see your website running at `http://localhost:4321/`. And that's it! You can now start building your website using `@db-ux/astro`. Have fun and make sure to check out the rest of our guides as well as the official [Astro documentation](https://docs.astro.build/)! 🎉
+
+## 🏗 Create your own pages
+
+We highly recommend using **[Markdown](https://duckduckgo.com/?q=markdown&ia=web)** to create pages as it's easy to learn and quick to use.
+
+To create a new Markdown page, simply create a new file with the `.md` extension in the `src/pages` directory. Astro uses a file-based routing system, meaning that directory and file names will directly be used to build the URL structure of your website. For example, creating a file at `src/pages/my-awesome-page.md` will make it available at `http://localhost:4321/my-awesome-page`. You can read more about Astro's file-based routing in the [official documentation](https://docs.astro.build/en/guides/routing/).
+
+## 🌄 Apply styling and DB UX Design System
+
+Astro features [layouts](https://docs.astro.build/en/basics/layouts/) that allow apps to share common UI structure and styling across multiple pages. `@db-ux/astro` comes with built-in layouts that already include all necessary styling and structure to get you started quickly. These also implement the DB UX Design System guidelines out-of-the-box.
+
+For any page to make use of the one of our built-in layouts (e.g. the [default layout](layouts/default)), you need to include the following front matter at the top of your Markdown or MDX files:
+
+```yaml
+---
+layout: '@db-ux/astro/layouts/default'
+---
+```
+
+Alternatively, if you'd like to use Astro's default `.astro` files, you can set the layout like this:
+
+```astro
+---
+import DefaultLayout from '@db-ux/astro/layouts/default';
+---
+
+<DefaultLayout>
+  <!-- Your page content goes here -->
+</DefaultLayout>
+```
+
+## 🧭 Make your page available in the main navigation
+
+`@db-ux/astro` comes with a built-in navigation menu that is included in most layouts. This navigation allows users to easily browse through the different pages of your website. As of now, this navigation is **not** generated automatically. Instead, you need to manually configure which pages should appear in the navigation.
+
+To do that, we recommend creating a file `app.navigation.ts` in the `src` directory of your Astro project. In this file, you can define the structure of your navigation menu by exporting an array of navigation items. For example:
+
+```js
+// src/app.navigation.ts
+export const navigation: NavigationItem[] = [
+  {
+    title: 'Guides',
+    children: [
+      {
+        title: 'Getting Started',
+        path: '/guides/getting-started',
+      },
+      {
+        title: 'Navigation',
+        path: '/guides/navigation',
+      },
+    ],
+  },
+  {
+    title: 'Layouts',
+    children: [
+      {
+        title: 'Default Layout',
+        path: '/layouts/default',
+      },
+    ],
+  }
+];
+```
+
+You can then import this navigation structure in your `astro.config.mjs` and pass it to the integration config:
+
+```js
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import { dbUxAstro } from '@db-ux/astro';
+import { navigation } from './src/app.navigation';
+
+export default defineConfig({
+  integrations: [
+    dbUxAstro({
+      // Other config options...
+      navigation,
+    }),
+  ],
+  // Other config options...
+});
+```
+
+Navigation is further explained in the [Navigation Guide](guides/navigation).
+
+And that's all you need to get started with `@db-ux/astro`! From here, you can explore more advanced features and customization options in the guides as well as in the layout and component references. Happy building! 🚀

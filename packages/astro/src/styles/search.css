@@ -1,0 +1,26 @@
+.dba-search {
+  .dba-search-result-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--db-spacing-fixed-md);
+    padding: var(--db-spacing-fixed-md);
+
+    a {
+      text-decoration: none;
+    }
+
+    .bold {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    small {
+      color: var(--db-adaptive-on-bg-basic-emphasis-90-default);
+    }
+
+    .no-results {
+      margin-inline: auto;
+      color: var(--db-adaptive-on-bg-basic-emphasis-90-default);
+    }
+  }
+}

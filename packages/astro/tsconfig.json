@@ -5,6 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@db-ux/astro": ["./src/main.ts"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

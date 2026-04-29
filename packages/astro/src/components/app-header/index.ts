@@ -1,2 +1,1 @@
-import AppHeader from './app-header.component.astro';
-export { AppHeader };
+export * from './app-header.component';

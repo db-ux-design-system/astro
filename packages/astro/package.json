@@ -17,7 +17,7 @@
       "import": "./src/main.ts"
     },
     "./components": {
-      "import": "./src/components/index.ts"
+      "import": "./src/components.ts"
     },
     "./layouts/default": {
       "import": "./src/layouts/default/index.ts"
@@ -36,20 +36,37 @@
     "lint": "astro check src"
   },
   "peerDependencies": {
-    "@db-ux/core-components": "^3.0.0",
-    "@db-ux/core-foundations": "^3.0.0",
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@astrojs/react": "^4.4.0",
+    "@db-ux/core-components": "^4.0.0",
+    "@db-ux/core-foundations": "^4.0.0",
+    "@db-ux/db-theme-icons": "^3.3.0",
+    "@db-ux/react-core-components": "^4.0.0"
   },
   "dependencies": {
     "@astrojs/mdx": "5.0.4",
-    "@astrojs/react": "5.0.4",
+    "@astrojs/sitemap": "3.7.2",
+    "@orama/plugin-astro": "3.1.18",
+    "@orama/orama": "3.1.18",
     "@spuxx/browser-utils": "1.14.0",
-    "react": "19.2.5"
+    "@spuxx/js-utils": "2.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
+    "@db-ux/core-components": "4.0.2",
+    "@db-ux/core-foundations": "4.0.2",
+    "@db-ux/db-theme-icons": "3.3.0",
+    "@db-ux/react-core-components": "4.0.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "astro": "5.18.0",
-    "typescript": "6.0.3"
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "typescript": "6.0.3",
+    "@astrojs/react": "5.0.4",
+    "@spuxx/browser-utils": "1.13.0"
   },
   "packageManager": "pnpm@10.14.0"
 }

@@ -1,0 +1,55 @@
+/**
+ * The front matter of a page.
+ */
+export interface FrontMatter {
+  /**
+   * The title of the page.
+   */
+  title?: string;
+  /**
+   * The author of the page.
+   */
+  author?: string;
+  /**
+   * The description of the page.
+   */
+  description?: string;
+  /**
+   * The creation date of the page.
+   */
+  date?: Date;
+  /**
+   * The path to the layout the page should use.
+   */
+  layout?: string;
+}
+
+/**
+ * A navigation item that can be used to build the navigation of the application.
+ */
+export interface NavigationItem {
+  /**
+   * The title of the navigation item.
+   */
+  title: string;
+  /*
+   * An optional icon that can be used to represent the navigation item.
+   */
+  icon?: string;
+  /**
+   * An optional path that the navigation item should link to. If none is provided,
+   * the navigation item will be rendered as a group of sub-items.
+   */
+  path?: string;
+  /**
+   * An optional list of sub-items that will be rendered as a group of navigation
+   * items if a path is not provided.
+   */
+  children?: NavigationItem[];
+  /**
+   * By default, sub-items are rendered in a dropdown menu. Setting this to `true` will render
+   * sub-items in a side panel instead.
+   * @see {@link https://design-system.deutschebahn.com/core-web/version/v4.6.1/components/navigation/navigation/how-to-use}
+   */
+  useSubNavigation?: boolean;
+}
