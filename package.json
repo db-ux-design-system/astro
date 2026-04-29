@@ -29,15 +29,15 @@
     "preview:astro": "pnpm --filter test-app-astro preview"
   },
   "devDependencies": {
-    "@dotenvx/dotenvx": "1.61.0",
+    "@dotenvx/dotenvx": "1.63.0",
     "husky": "9.1.7",
     "changesets": "1.0.2",
     "@eslint/js": "10.0.1",
-    "eslint": "10.2.0",
-    "globals": "17.4.0",
-    "prettier": "3.8.2",
+    "eslint": "10.2.1",
+    "globals": "17.5.0",
+    "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
-    "typescript-eslint": "8.58.1"
+    "typescript-eslint": "8.59.0"
   },
   "packageManager": "pnpm@10.14.0"
 }

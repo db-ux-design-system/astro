@@ -46,12 +46,14 @@
     "@db-ux/react-core-components": "^4.0.0"
   },
   "dependencies": {
-    "@astrojs/mdx": "5.0.3",
+    "@astrojs/mdx": "5.0.4",
     "@astrojs/sitemap": "3.6.0",
     "@orama/plugin-astro": "3.1.16",
     "@orama/orama": "3.1.16",
-    "@spuxx/browser-utils": "1.13.0",
-    "@spuxx/js-utils": "2.1.0"
+    "@spuxx/browser-utils": "1.14.0",
+    "@spuxx/js-utils": "2.1.0",
+    "@astrojs/react": "5.0.4",
+    "react": "19.2.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
@@ -64,7 +66,7 @@
     "astro": "5.18.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "@astrojs/react": "5.0.3",
     "@spuxx/browser-utils": "1.13.0"
   },
