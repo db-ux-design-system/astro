@@ -29,7 +29,7 @@
     "preview:astro": "pnpm --filter test-app-astro preview"
   },
   "devDependencies": {
-    "@dotenvx/dotenvx": "1.63.0",
+    "@dotenvx/dotenvx": "1.64.0",
     "husky": "9.1.7",
     "changesets": "1.0.2",
     "@eslint/js": "10.0.1",
