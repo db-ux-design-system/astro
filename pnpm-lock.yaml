@@ -45,8 +45,8 @@ importers:
         specifier: workspace:@db-ux/astro@*
         version: link:../../packages/astro
       '@db-ux/core-components':
-        specifier: 4.6.1
-        version: 4.6.1
+        specifier: 4.7.0
+        version: 4.7.0
       '@db-ux/core-foundations':
         specifier: 4.6.1
         version: 4.6.1
@@ -101,8 +101,8 @@ importers:
         specifier: 5.0.4
         version: 5.0.4(@types/node@25.6.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(lightningcss@1.32.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(yaml@2.8.3)
       '@db-ux/core-components':
-        specifier: 4.6.1
-        version: 4.6.1
+        specifier: 4.7.0
+        version: 4.7.0
       '@db-ux/core-foundations':
         specifier: 4.0.2
         version: 4.0.2
@@ -325,9 +325,6 @@ packages:
   '@capsizecss/unpack@4.0.0':
     resolution: {integrity: sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==}
     engines: {node: '>=18'}
-
-  '@db-ux/core-components@4.6.1':
-    resolution: {integrity: sha512-Be6JhKJnxuJyWUwuKq4IdSIJ0ngQz/QeRJBm4F1ECApeUyqp+AGgdsGnyx5FyHi5wow6kBITKYWh48NrhKpjSw==}
 
   '@db-ux/core-components@4.7.0':
     resolution: {integrity: sha512-7eEkJoamzIQcY8eYYEdJLY0n/pLicZRbcQBxQ5wo2Z46o+pQBsA7vygoy15bj8P1dgLHj5U5g1NV6KjGlvCWIQ==}
@@ -4109,10 +4106,6 @@ snapshots:
   '@capsizecss/unpack@4.0.0':
     dependencies:
       fontkitten: 1.0.2
-
-  '@db-ux/core-components@4.6.1':
-    dependencies:
-      '@db-ux/core-foundations': 4.6.1
 
   '@db-ux/core-components@4.7.0':
     dependencies:
