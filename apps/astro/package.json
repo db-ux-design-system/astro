@@ -17,7 +17,7 @@
     "@astrojs/react": "5.0.4",
     "@db-ux/astro": "workspace:@db-ux/astro@*",
     "@db-ux/core-components": "4.7.0",
-    "@db-ux/core-foundations": "4.6.1",
+    "@db-ux/core-foundations": "4.7.2",
     "@db-ux/db-theme-icons": "3.9.0",
     "@db-ux/react-core-components": "4.7.0"
   },
