@@ -1,6 +1,6 @@
 {
   "name": "@db-ux/astro",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "DB UX Design System - Astro",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     }
   },
   "files": [
-    "dist",
+    "src",
     "README.md",
     "LICENSE",
     "package.json"

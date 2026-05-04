@@ -29,3 +29,27 @@ jobs:
     uses: ./.github/workflows/02-deploy-gh-pages.yml
     if: ${{ github.event.pull_request == null  }}
     needs: [build, lint, test]
+
+  release:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup
+        with:
+          registry-url: 'https://registry.npmjs.org'
+      - run: |
+          pnpm build --filter @db-ux/create-astro
+
+      - id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm changeset publish
+          title: 'chore: version packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
