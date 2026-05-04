@@ -1,7 +1,8 @@
 {
-  "name": "@db-ux/astro",
+  "name": "db-ux-astro-monorepo",
   "version": "0.0.0",
   "type": "module",
+  "private": true,
   "description": "DB UX Design System - Astro",
   "repository": {
     "type": "git",
