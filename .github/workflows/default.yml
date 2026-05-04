@@ -32,6 +32,7 @@ jobs:
 
   release:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: [build, lint, test]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -39,9 +40,10 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup
-        with:
-          registry-url: 'https://registry.npmjs.org'
+
+      - name: 🔄 Init PNPM
+        uses: ./.github/actions/pnpm-init
+
       - run: |
           pnpm build --filter @db-ux/create-astro
 
