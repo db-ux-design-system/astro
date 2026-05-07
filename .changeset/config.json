@@ -1,9 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config/schema.json",
-  "changelog": "@changesets/changelog-github",
+  "changelog": ["@changesets/changelog-github", { "repo": "db-ux-design-system/astro" }],
   "commit": false,
   "fixed": [[]],
-  "ignore": ["scripts"],
+  "ignore": ["test-app-astro"],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
