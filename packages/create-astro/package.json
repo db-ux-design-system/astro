@@ -1,6 +1,6 @@
 {
   "name": "@db-ux/create-astro",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CLI installer for @db-ux/astro package with automatic peer dependency installation",
   "type": "module",
   "bin": {
