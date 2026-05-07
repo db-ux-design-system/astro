@@ -48,7 +48,7 @@ importers:
         specifier: 5.0.4
         version: 5.0.4(@types/node@25.6.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(lightningcss@1.32.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(yaml@2.8.3)
       '@db-ux/astro':
-        specifier: workspace:@db-ux/astro@*
+        specifier: workspace:*
         version: link:../../packages/astro
       '@db-ux/core-components':
         specifier: 4.7.2
