@@ -97,8 +97,8 @@ importers:
         specifier: 1.14.0
         version: 1.14.0
       '@spuxx/js-utils':
-        specifier: 2.1.1
-        version: 2.1.1
+        specifier: 2.1.2
+        version: 2.1.2
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.9
@@ -1619,8 +1619,8 @@ packages:
       '@modyfi/vite-plugin-yaml':
         optional: true
 
-  '@spuxx/js-utils@2.1.1':
-    resolution: {integrity: sha512-PanVgb9swDbvejFXgLzCNoYoOjiPikZiItfA+mS3wso5UsHmmwHIpaUD9NvZ5GdvIzTZxw0cYTW6ynySdFYSIw==}
+  '@spuxx/js-utils@2.1.2':
+    resolution: {integrity: sha512-6GCAnCHat4zd3Gx+FQuVjogr1ECG/V622xOsbxnzgPtJJwSC7byZA0e+1jl5wowQM8FWiRClI67dAsRbtl8lpg==}
     peerDependencies:
       '@modyfi/vite-plugin-yaml': ^1.1.0
     peerDependenciesMeta:
@@ -5474,7 +5474,7 @@ snapshots:
 
   '@spuxx/js-utils@1.3.0': {}
 
-  '@spuxx/js-utils@2.1.1': {}
+  '@spuxx/js-utils@2.1.2': {}
 
   '@standard-schema/spec@1.1.0': {}
 
