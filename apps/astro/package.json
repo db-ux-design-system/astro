@@ -11,7 +11,7 @@
     "lint": "astro check src"
   },
   "dependencies": {
-    "astro": "5.18.1",
+    "astro": "6.2.2",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "@astrojs/react": "5.0.4",
