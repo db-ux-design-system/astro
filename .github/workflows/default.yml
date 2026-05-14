@@ -48,7 +48,7 @@ jobs:
           pnpm build --filter @db-ux/create-astro
 
       - id: changesets
-        uses: changesets/action@v1.7.0
+        uses: changesets/action@v1.8.0
         with:
           publish: pnpm changeset publish
           title: 'chore: version packages'
