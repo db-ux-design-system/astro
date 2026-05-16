@@ -1,3 +1,7 @@
 packages:
   - packages/*
   - apps/*
+allowBuilds:
+  '@db-ux/db-theme-icons': true
+  esbuild: true
+  sharp: false
