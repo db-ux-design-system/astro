@@ -14,7 +14,7 @@
     "astro": "5.18.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "@astrojs/react": "5.0.4",
+    "@astrojs/react": "5.0.5",
     "@db-ux/astro": "workspace:*",
     "@db-ux/core-components": "4.7.2",
     "@db-ux/core-foundations": "4.6.1",
