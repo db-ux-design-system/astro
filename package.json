@@ -31,7 +31,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.7.0",
     "@changesets/cli": "2.31.0",
-    "@dotenvx/dotenvx": "1.67.0",
+    "@dotenvx/dotenvx": "1.68.1",
     "husky": "9.1.7",
     "changesets": "1.0.2",
     "@eslint/js": "10.0.1",
