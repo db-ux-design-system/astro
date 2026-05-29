@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "5.0.6",
-    "@astrojs/sitemap": "3.7.2",
+    "@astrojs/sitemap": "3.7.3",
     "@orama/plugin-astro": "3.1.18",
     "@orama/orama": "3.1.18",
     "@spuxx/browser-utils": "1.14.0",
