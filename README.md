@@ -19,7 +19,7 @@ Please visit our [Documentation](https://design-system.deutschebahn.com/astro/) 
 
 ## Contribution
 
-Before contributing, please make sure to familiarize yourself with our [code of conduct](https://github.com/db-ux-design-system/astro/blob/main/CODE-OF-CONDUCT.md).
+Before contributing, please make sure to familiarize yourself with our [code of conduct](https://github.com/db-ux-design-system/.github/blob/main/CODE-OF-CONDUCT.md).
 
 ### Setup
 
