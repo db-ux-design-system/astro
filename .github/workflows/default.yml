@@ -39,7 +39,7 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
 
       - name: 🔄 Init PNPM
         uses: ./.github/actions/pnpm-init
