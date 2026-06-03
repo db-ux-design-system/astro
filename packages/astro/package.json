@@ -65,7 +65,7 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "typescript": "6.0.3",
-    "@astrojs/react": "5.0.5",
+    "@astrojs/react": "5.0.6",
     "@spuxx/browser-utils": "1.13.0"
   },
   "packageManager": "pnpm@10.14.0"
