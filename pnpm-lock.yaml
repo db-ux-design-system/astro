@@ -15,8 +15,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0(@types/node@25.9.1)
       '@dotenvx/dotenvx':
-        specifier: 1.69.2
-        version: 1.69.2
+        specifier: 1.70.0
+        version: 1.70.0
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1)
@@ -435,8 +435,8 @@ packages:
   '@db-ux/react-core-components@4.9.1':
     resolution: {integrity: sha512-dJWML2AWZMVk7adWMhPiVVn+eMKWzUjzPYvj9hUOS1TMzJZW4/o5zqMIqa5qrTTfNwl5mdnsvsdKvL/ft7DxOA==}
 
-  '@dotenvx/dotenvx@1.69.2':
-    resolution: {integrity: sha512-60Vh31k5bAAPq57Isx+Iopl2FrZQzZyUc4kh/OESgXiwhrKXqdxEn3JGTGSawng1DkkeC4jofFq1VpPJqNQx4w==}
+  '@dotenvx/dotenvx@1.70.0':
+    resolution: {integrity: sha512-vC/rom87ym8HEyVdzZZS6/PYGg1Z5fmozUZ8l6cw1sYAxdL1lEyvE/JbK8cMFQoq3GsR/P1PiQRY+VXMtDN9bw==}
     hasBin: true
 
   '@ecies/ciphers@0.2.6':
@@ -4753,7 +4753,7 @@ snapshots:
       '@db-ux/core-components': 4.9.1
       '@db-ux/core-foundations': 4.9.1
 
-  '@dotenvx/dotenvx@1.69.2':
+  '@dotenvx/dotenvx@1.70.0':
     dependencies:
       commander: 11.1.0
       dotenv: 17.4.2
@@ -5364,7 +5364,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.9
       estree-walker: 2.0.2
-      picomatch: 4.0.3
+      picomatch: 4.0.4
     optionalDependencies:
       rollup: 4.61.0
 
@@ -6671,10 +6671,6 @@ snapshots:
   fastq@1.20.1:
     dependencies:
       reusify: 1.1.0
-
-  fdir@6.5.0(picomatch@4.0.3):
-    optionalDependencies:
-      picomatch: 4.0.3
 
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
@@ -8285,8 +8281,8 @@ snapshots:
 
   tinyglobby@0.2.15:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
 
   tinyglobby@0.2.16:
     dependencies:
@@ -8459,8 +8455,8 @@ snapshots:
   vite@6.4.1(@types/node@25.9.1)(lightningcss@1.32.0)(yaml@2.8.3):
     dependencies:
       esbuild: 0.25.12
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
       postcss: 8.5.8
       rollup: 4.59.0
       tinyglobby: 0.2.15
