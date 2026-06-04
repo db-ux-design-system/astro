@@ -51,8 +51,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/astro
       '@db-ux/core-components':
-        specifier: 4.9.1
-        version: 4.9.1
+        specifier: 4.10.0
+        version: 4.10.0
       '@db-ux/core-foundations':
         specifier: 4.6.1
         version: 4.6.1
@@ -107,8 +107,8 @@ importers:
         specifier: 5.0.6
         version: 5.0.6(@types/node@25.9.1)(@types/react-dom@19.2.3(@types/react@19.2.16))(@types/react@19.2.16)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(yaml@2.8.3)
       '@db-ux/core-components':
-        specifier: 4.9.1
-        version: 4.9.1
+        specifier: 4.10.0
+        version: 4.10.0
       '@db-ux/core-foundations':
         specifier: 4.0.2
         version: 4.0.2
@@ -412,11 +412,17 @@ packages:
   '@changesets/write@0.4.0':
     resolution: {integrity: sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q==}
 
+  '@db-ux/core-components@4.10.0':
+    resolution: {integrity: sha512-YwkK3aHin6XzVZBfeWlKZZF3fLmSiUQM+cOD8m2e8mKYIN1RpJqzzURRvQS2sVCp4Vp5OLcqDQqinATNp8/PLw==}
+
   '@db-ux/core-components@4.9.1':
     resolution: {integrity: sha512-ZONdmIV1J+gv5fVe+JTxzUogW3YywrbxXmRwg43tf6ERtfwnaeUBM06kvm/kMBjm56k+uaD/1JzHSczSa6y5eg==}
 
   '@db-ux/core-foundations@4.0.2':
     resolution: {integrity: sha512-+LnXO8y0tQRaoSmZYenVTWqAh6X8kLSchbwIX/VvR+Cqy+Bi+m4mRTyINczLfpIuAa1I7R4R70xnqQCeUchuiw==}
+
+  '@db-ux/core-foundations@4.10.0':
+    resolution: {integrity: sha512-p914wvXBuicd6kfdJx4629tkMk0MwwWl69fTo97IMai4HOFOJyYaX2vf8+mN+aC3ryD4aD7Uz+bVKmsFPhvckA==}
 
   '@db-ux/core-foundations@4.6.1':
     resolution: {integrity: sha512-d6a2RaWUpz1/7dCRoNj0OFAJKwm0fnGI6niUbEZRn0P5MiAjKy6noXzhsBXEE0n/ls3zxFIuqmMNNM+nZQ3/AQ==}
@@ -4727,11 +4733,17 @@ snapshots:
       human-id: 4.1.3
       prettier: 2.8.8
 
+  '@db-ux/core-components@4.10.0':
+    dependencies:
+      '@db-ux/core-foundations': 4.10.0
+
   '@db-ux/core-components@4.9.1':
     dependencies:
       '@db-ux/core-foundations': 4.9.1
 
   '@db-ux/core-foundations@4.0.2': {}
+
+  '@db-ux/core-foundations@4.10.0': {}
 
   '@db-ux/core-foundations@4.6.1': {}
 
