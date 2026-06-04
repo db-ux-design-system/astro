@@ -54,8 +54,8 @@ importers:
         specifier: 4.10.0
         version: 4.10.0
       '@db-ux/core-foundations':
-        specifier: 4.6.1
-        version: 4.6.1
+        specifier: 4.10.0
+        version: 4.10.0
       '@db-ux/db-theme-icons':
         specifier: 3.9.0
         version: 3.9.0
@@ -110,8 +110,8 @@ importers:
         specifier: 4.10.0
         version: 4.10.0
       '@db-ux/core-foundations':
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 4.10.0
+        version: 4.10.0
       '@db-ux/db-theme-icons':
         specifier: 3.9.0
         version: 3.9.0
@@ -415,20 +415,8 @@ packages:
   '@db-ux/core-components@4.10.0':
     resolution: {integrity: sha512-YwkK3aHin6XzVZBfeWlKZZF3fLmSiUQM+cOD8m2e8mKYIN1RpJqzzURRvQS2sVCp4Vp5OLcqDQqinATNp8/PLw==}
 
-  '@db-ux/core-components@4.9.1':
-    resolution: {integrity: sha512-ZONdmIV1J+gv5fVe+JTxzUogW3YywrbxXmRwg43tf6ERtfwnaeUBM06kvm/kMBjm56k+uaD/1JzHSczSa6y5eg==}
-
-  '@db-ux/core-foundations@4.0.2':
-    resolution: {integrity: sha512-+LnXO8y0tQRaoSmZYenVTWqAh6X8kLSchbwIX/VvR+Cqy+Bi+m4mRTyINczLfpIuAa1I7R4R70xnqQCeUchuiw==}
-
   '@db-ux/core-foundations@4.10.0':
     resolution: {integrity: sha512-p914wvXBuicd6kfdJx4629tkMk0MwwWl69fTo97IMai4HOFOJyYaX2vf8+mN+aC3ryD4aD7Uz+bVKmsFPhvckA==}
-
-  '@db-ux/core-foundations@4.6.1':
-    resolution: {integrity: sha512-d6a2RaWUpz1/7dCRoNj0OFAJKwm0fnGI6niUbEZRn0P5MiAjKy6noXzhsBXEE0n/ls3zxFIuqmMNNM+nZQ3/AQ==}
-
-  '@db-ux/core-foundations@4.9.1':
-    resolution: {integrity: sha512-wJldkVVp0r7vD77rE04Vx38SUP/3bWCuD6RBMbLYA1bFeicMoJHI7EfZ1a0B4rTeQ/8V9j1LX0BOmy7wx2tcxA==}
 
   '@db-ux/db-theme-icons@3.9.0':
     resolution: {integrity: sha512-odOwooJ3/BGI2RJTfVMbMPQ26PItOZgKCNw/e38MmB2aH1cRMF0ZsRY8zxzeEZypNvWurll2Ri+2x/dTHR2GGA==}
@@ -4737,17 +4725,7 @@ snapshots:
     dependencies:
       '@db-ux/core-foundations': 4.10.0
 
-  '@db-ux/core-components@4.9.1':
-    dependencies:
-      '@db-ux/core-foundations': 4.9.1
-
-  '@db-ux/core-foundations@4.0.2': {}
-
   '@db-ux/core-foundations@4.10.0': {}
-
-  '@db-ux/core-foundations@4.6.1': {}
-
-  '@db-ux/core-foundations@4.9.1': {}
 
   '@db-ux/db-theme-icons@3.9.0': {}
 
