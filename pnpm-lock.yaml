@@ -60,8 +60,8 @@ importers:
         specifier: 3.9.0
         version: 3.9.0
       '@db-ux/react-core-components':
-        specifier: 4.9.1
-        version: 4.9.1
+        specifier: 4.10.0
+        version: 4.10.0
       astro:
         specifier: 5.18.1
         version: 5.18.1(@types/node@25.9.1)(lightningcss@1.32.0)(rollup@4.61.0)(typescript@6.0.3)(yaml@2.8.3)
@@ -116,8 +116,8 @@ importers:
         specifier: 3.9.0
         version: 3.9.0
       '@db-ux/react-core-components':
-        specifier: 4.9.1
-        version: 4.9.1
+        specifier: 4.10.0
+        version: 4.10.0
       '@types/react':
         specifier: 19.2.16
         version: 19.2.16
@@ -412,11 +412,17 @@ packages:
   '@changesets/write@0.4.0':
     resolution: {integrity: sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q==}
 
+  '@db-ux/core-components@4.10.0':
+    resolution: {integrity: sha512-YwkK3aHin6XzVZBfeWlKZZF3fLmSiUQM+cOD8m2e8mKYIN1RpJqzzURRvQS2sVCp4Vp5OLcqDQqinATNp8/PLw==}
+
   '@db-ux/core-components@4.9.1':
     resolution: {integrity: sha512-ZONdmIV1J+gv5fVe+JTxzUogW3YywrbxXmRwg43tf6ERtfwnaeUBM06kvm/kMBjm56k+uaD/1JzHSczSa6y5eg==}
 
   '@db-ux/core-foundations@4.0.2':
     resolution: {integrity: sha512-+LnXO8y0tQRaoSmZYenVTWqAh6X8kLSchbwIX/VvR+Cqy+Bi+m4mRTyINczLfpIuAa1I7R4R70xnqQCeUchuiw==}
+
+  '@db-ux/core-foundations@4.10.0':
+    resolution: {integrity: sha512-p914wvXBuicd6kfdJx4629tkMk0MwwWl69fTo97IMai4HOFOJyYaX2vf8+mN+aC3ryD4aD7Uz+bVKmsFPhvckA==}
 
   '@db-ux/core-foundations@4.6.1':
     resolution: {integrity: sha512-d6a2RaWUpz1/7dCRoNj0OFAJKwm0fnGI6niUbEZRn0P5MiAjKy6noXzhsBXEE0n/ls3zxFIuqmMNNM+nZQ3/AQ==}
@@ -427,8 +433,8 @@ packages:
   '@db-ux/db-theme-icons@3.9.0':
     resolution: {integrity: sha512-odOwooJ3/BGI2RJTfVMbMPQ26PItOZgKCNw/e38MmB2aH1cRMF0ZsRY8zxzeEZypNvWurll2Ri+2x/dTHR2GGA==}
 
-  '@db-ux/react-core-components@4.9.1':
-    resolution: {integrity: sha512-dJWML2AWZMVk7adWMhPiVVn+eMKWzUjzPYvj9hUOS1TMzJZW4/o5zqMIqa5qrTTfNwl5mdnsvsdKvL/ft7DxOA==}
+  '@db-ux/react-core-components@4.10.0':
+    resolution: {integrity: sha512-3Uc8TAuSl8NTLJcOfue41Clsfn5Vd5C79ESoMUkqe78uf3GRtJrp/zVsMPqeYTn0ows6HYL0TaiGxBQIzB1pPw==}
 
   '@dotenvx/dotenvx@1.71.0':
     resolution: {integrity: sha512-KEUw/mGu+EDRhYWRTNGHIimVCs9NvMFaIXOGrHSXoCteKLE5EsJnmPjOPpYorjXVg/0xG0fbdVw720azw1z4ag==}
@@ -4727,11 +4733,17 @@ snapshots:
       human-id: 4.1.3
       prettier: 2.8.8
 
+  '@db-ux/core-components@4.10.0':
+    dependencies:
+      '@db-ux/core-foundations': 4.10.0
+
   '@db-ux/core-components@4.9.1':
     dependencies:
       '@db-ux/core-foundations': 4.9.1
 
   '@db-ux/core-foundations@4.0.2': {}
+
+  '@db-ux/core-foundations@4.10.0': {}
 
   '@db-ux/core-foundations@4.6.1': {}
 
@@ -4739,10 +4751,10 @@ snapshots:
 
   '@db-ux/db-theme-icons@3.9.0': {}
 
-  '@db-ux/react-core-components@4.9.1':
+  '@db-ux/react-core-components@4.10.0':
     dependencies:
-      '@db-ux/core-components': 4.9.1
-      '@db-ux/core-foundations': 4.9.1
+      '@db-ux/core-components': 4.10.0
+      '@db-ux/core-foundations': 4.10.0
 
   '@dotenvx/dotenvx@1.71.0':
     dependencies:
