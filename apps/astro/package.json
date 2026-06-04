@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "astro": "5.18.1",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "@astrojs/react": "5.0.6",
     "@db-ux/astro": "workspace:*",
     "@db-ux/core-components": "4.9.1",
@@ -22,7 +22,7 @@
     "@db-ux/react-core-components": "4.9.1"
   },
   "devDependencies": {
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3"
   },
   "packageManager": "pnpm@10.14.0"
