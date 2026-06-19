@@ -54,8 +54,8 @@ importers:
         specifier: 4.11.0
         version: 4.11.0
       '@db-ux/core-foundations':
-        specifier: 4.6.1
-        version: 4.6.1
+        specifier: 4.11.0
+        version: 4.11.0
       '@db-ux/db-theme-icons':
         specifier: 3.9.0
         version: 3.9.0
@@ -110,8 +110,8 @@ importers:
         specifier: 4.11.0
         version: 4.11.0
       '@db-ux/core-foundations':
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 4.11.0
+        version: 4.11.0
       '@db-ux/db-theme-icons':
         specifier: 3.9.0
         version: 3.9.0
@@ -415,14 +415,8 @@ packages:
   '@db-ux/core-components@4.11.0':
     resolution: {integrity: sha512-zvd6NSimWheT6YbJeYt2xAbnLAak5hyZ1mbjZjSLH6HbUSep7nkpUo+NZ+4+gjhzToIwxWclnWa93bBWxC113g==}
 
-  '@db-ux/core-foundations@4.0.2':
-    resolution: {integrity: sha512-+LnXO8y0tQRaoSmZYenVTWqAh6X8kLSchbwIX/VvR+Cqy+Bi+m4mRTyINczLfpIuAa1I7R4R70xnqQCeUchuiw==}
-
   '@db-ux/core-foundations@4.11.0':
     resolution: {integrity: sha512-7qiEibYKLgFMwy4vAWhkulNWZBeiQOPqt8EcSf/Wt+xTa9FdMoX94Dsw/aDZQrveD1vvp8qsmPg3aiK7/rb1tA==}
-
-  '@db-ux/core-foundations@4.6.1':
-    resolution: {integrity: sha512-d6a2RaWUpz1/7dCRoNj0OFAJKwm0fnGI6niUbEZRn0P5MiAjKy6noXzhsBXEE0n/ls3zxFIuqmMNNM+nZQ3/AQ==}
 
   '@db-ux/db-theme-icons@3.9.0':
     resolution: {integrity: sha512-odOwooJ3/BGI2RJTfVMbMPQ26PItOZgKCNw/e38MmB2aH1cRMF0ZsRY8zxzeEZypNvWurll2Ri+2x/dTHR2GGA==}
@@ -4856,11 +4850,7 @@ snapshots:
     dependencies:
       '@db-ux/core-foundations': 4.11.0
 
-  '@db-ux/core-foundations@4.0.2': {}
-
   '@db-ux/core-foundations@4.11.0': {}
-
-  '@db-ux/core-foundations@4.6.1': {}
 
   '@db-ux/db-theme-icons@3.9.0': {}
 
