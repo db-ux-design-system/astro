@@ -60,8 +60,8 @@ importers:
         specifier: 3.9.0
         version: 3.9.0
       '@db-ux/react-core-components':
-        specifier: 4.11.0
-        version: 4.11.0
+        specifier: 4.12.1
+        version: 4.12.1
       astro:
         specifier: 5.18.1
         version: 5.18.1(@types/node@26.0.0)(lightningcss@1.32.0)(rollup@4.61.1)(typescript@6.0.3)(yaml@2.8.3)
@@ -116,8 +116,8 @@ importers:
         specifier: 3.9.0
         version: 3.9.0
       '@db-ux/react-core-components':
-        specifier: 4.11.0
-        version: 4.11.0
+        specifier: 4.12.1
+        version: 4.12.1
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -433,8 +433,8 @@ packages:
   '@db-ux/db-theme-icons@3.9.0':
     resolution: {integrity: sha512-odOwooJ3/BGI2RJTfVMbMPQ26PItOZgKCNw/e38MmB2aH1cRMF0ZsRY8zxzeEZypNvWurll2Ri+2x/dTHR2GGA==}
 
-  '@db-ux/react-core-components@4.11.0':
-    resolution: {integrity: sha512-sy3nOWDLZ/ARbkhkwzrAeKcwVWDsPob26xm+oAGbdbv5voms1uveKIILRROEQ2Hcu+a+5bffgLyC+P4uqLy74g==}
+  '@db-ux/react-core-components@4.12.1':
+    resolution: {integrity: sha512-FxZKsIAXZisbERUjU+4CP8bjHQRmY/5eta0av+cdWfFvOcSiiLHH/wR5NrBcfW1hBRs782ocQ/ZKdod4MQzccw==}
 
   '@dotenvx/dotenvx@1.73.1':
     resolution: {integrity: sha512-AWf8edAsSpINqJbtaZsaiV3PO+vw5pS4wJFl6ahYNdnp3gfFYeMxRCdsA9042bKP4UPCs8yr5FikSFlvkmFVag==}
@@ -4876,10 +4876,10 @@ snapshots:
 
   '@db-ux/db-theme-icons@3.9.0': {}
 
-  '@db-ux/react-core-components@4.11.0':
+  '@db-ux/react-core-components@4.12.1':
     dependencies:
-      '@db-ux/core-components': 4.11.0
-      '@db-ux/core-foundations': 4.11.0
+      '@db-ux/core-components': 4.12.1
+      '@db-ux/core-foundations': 4.12.1
 
   '@dotenvx/dotenvx@1.73.1':
     dependencies:
