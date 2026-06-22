@@ -15,8 +15,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0(@types/node@26.0.0)
       '@dotenvx/dotenvx':
-        specifier: 1.73.1
-        version: 1.73.1
+        specifier: 1.74.3
+        version: 1.74.3
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.5.0)
@@ -436,8 +436,8 @@ packages:
   '@db-ux/react-core-components@4.12.1':
     resolution: {integrity: sha512-FxZKsIAXZisbERUjU+4CP8bjHQRmY/5eta0av+cdWfFvOcSiiLHH/wR5NrBcfW1hBRs782ocQ/ZKdod4MQzccw==}
 
-  '@dotenvx/dotenvx@1.73.1':
-    resolution: {integrity: sha512-AWf8edAsSpINqJbtaZsaiV3PO+vw5pS4wJFl6ahYNdnp3gfFYeMxRCdsA9042bKP4UPCs8yr5FikSFlvkmFVag==}
+  '@dotenvx/dotenvx@1.74.3':
+    resolution: {integrity: sha512-+VjTIiOCApjB0K4a41+SkN18gTetmhU9UN2JD8LHeNUqo/38FmtgvdtWsW/WWN1dyYRGS7XKeAAb/ruy7x1tRw==}
     hasBin: true
 
   '@ecies/ciphers@0.2.6':
@@ -3602,6 +3602,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.8.5:
+    resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   sharp@0.34.5:
     resolution: {integrity: sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -3731,8 +3736,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  systeminformation@5.31.7:
-    resolution: {integrity: sha512-/8NC53e5nP9nmhn42/ncdOkyJnOoue/Vy+tJOyUGd1Yv66G069wK4rrziwhrqDETgk78CudTQupw5z19S5uoZw==}
+  systeminformation@5.31.8:
+    resolution: {integrity: sha512-/HGurKdgjYGbfwCPSokoX4WAlasVxuj1SnTukLiIYHPkjbDbN1PMATj8mkHpqkVzUF34y5ZyCY1TMKP32AI9rA==}
     engines: {node: '>=8.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
     hasBin: true
@@ -4881,7 +4886,7 @@ snapshots:
       '@db-ux/core-components': 4.12.1
       '@db-ux/core-foundations': 4.12.1
 
-  '@dotenvx/dotenvx@1.73.1':
+  '@dotenvx/dotenvx@1.74.3':
     dependencies:
       commander: 11.1.0
       conf: 10.2.0
@@ -4895,7 +4900,7 @@ snapshots:
       object-treeify: 1.1.33
       open: 8.4.2
       picomatch: 4.0.4
-      systeminformation: 5.31.7
+      systeminformation: 5.31.8
       undici: 7.28.0
       which: 4.0.0
       yocto-spinner: 1.2.0
@@ -6473,7 +6478,7 @@ snapshots:
       json-schema-typed: 7.0.3
       onetime: 5.1.2
       pkg-up: 3.1.0
-      semver: 7.8.4
+      semver: 7.8.5
 
   convert-source-map@2.0.0: {}
 
@@ -7366,7 +7371,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.8.4
+      semver: 7.8.5
 
   markdown-extensions@2.0.0: {}
 
@@ -8347,6 +8352,8 @@ snapshots:
 
   semver@7.8.4: {}
 
+  semver@7.8.5: {}
+
   sharp@0.34.5:
     dependencies:
       '@img/colour': 1.1.0
@@ -8523,7 +8530,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.5.0
 
-  systeminformation@5.31.7: {}
+  systeminformation@5.31.8: {}
 
   term-size@2.2.1: {}
 
@@ -8585,7 +8592,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.6:
     dependencies:
-      semver: 7.8.4
+      semver: 7.8.5
 
   typescript-eslint@8.61.1(eslint@10.5.0)(typescript@6.0.3):
     dependencies:
@@ -8826,7 +8833,7 @@ snapshots:
   volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       path-browserify: 1.0.1
-      semver: 7.8.4
+      semver: 7.8.5
       typescript-auto-import-cache: 0.3.6
       vscode-languageserver-textdocument: 1.0.12
       vscode-nls: 5.2.0
