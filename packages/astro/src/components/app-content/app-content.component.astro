@@ -13,7 +13,7 @@ console.log(toc);
 const showToc = headings.length > 0 && toc !== false;
 ---
 
-<main class="dba-main">
+<main class="dba-main" data-pagefind-body>
   {showToc && <TableOfContents client:only astro={Astro} headings={headings} />}
   <article class="dba-main-inner">
     <div class="dba-main-content">

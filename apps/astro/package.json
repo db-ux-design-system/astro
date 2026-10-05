@@ -11,15 +11,15 @@
     "lint": "astro check src"
   },
   "dependencies": {
-    "astro": "5.18.1",
+    "astro": "7.3.5",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "@astrojs/react": "6.0.0",
+    "@astrojs/react": "7.0.0",
     "@db-ux/astro": "workspace:*",
-    "@db-ux/core-components": "4.13.0",
-    "@db-ux/core-foundations": "4.13.0",
-    "@db-ux/db-theme-icons": "3.9.0",
-    "@db-ux/react-core-components": "4.13.0"
+    "@db-ux/core-components": "5.6.1",
+    "@db-ux/core-foundations": "5.6.1",
+    "@db-ux/db-theme-icons": "4.3.0",
+    "@db-ux/react-core-components": "5.6.1"
   },
   "devDependencies": {
     "@types/react": "19.2.17",
