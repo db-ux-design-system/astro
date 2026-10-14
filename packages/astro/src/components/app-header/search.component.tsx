@@ -136,9 +136,7 @@ export function Search(): ReactElement {
               <a key={result.url} href={withBase(result.url)}>
                 <DBCard>
                   <span className="bold">{result.meta.title}</span>
-                  <small
-                    dangerouslySetInnerHTML={{ __html: result.excerpt }}
-                  />
+                  <small dangerouslySetInnerHTML={{ __html: result.excerpt }} />
                 </DBCard>
               </a>
             ))

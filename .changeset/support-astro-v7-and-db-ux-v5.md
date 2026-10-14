@@ -1,5 +1,5 @@
 ---
-"@db-ux/astro": minor
+'@db-ux/astro': minor
 ---
 
 Add support for Astro v7 and DB UX Design System v5
