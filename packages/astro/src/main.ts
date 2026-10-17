@@ -2,7 +2,7 @@ import type { AstroIntegration } from 'astro';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import orama from '@orama/plugin-astro';
+import pagefind from 'astro-pagefind';
 import type { DbUxAstroConfig, CombinedConfig } from './config/config.types';
 import { filterSitemapBlacklist } from './utils/sitemap.utils';
 import { defaultConfig } from './config/config.default';
@@ -66,13 +66,7 @@ export function dbUxAstro(config: DbUxAstroConfig): AstroIntegration {
         const bundledIntegrations = [
           react(),
           mdx(),
-          orama({
-            pages: {
-              pathMatcher: new RegExp('.*'),
-              language: 'english',
-              contentSelectors: ['main'],
-            },
-          }),
+          pagefind(),
           sitemap({
             filter: (page) =>
               filterSitemapBlacklist(page, combinedConfig, logger),
